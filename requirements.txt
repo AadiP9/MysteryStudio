@@ -1,0 +1,14 @@
+numpy>=1.26
+scipy>=1.11
+opencv-python-headless>=4.9
+Pillow>=10.0
+soundfile>=0.12
+PyYAML>=6.0
+requests>=2.31
+rapidfuzz>=3.6
+kokoro-onnx>=0.4
+edge-tts>=7.0
+google-genai>=1.0
+google-api-python-client>=2.120
+google-auth>=2.28
+google-auth-oauthlib>=1.2

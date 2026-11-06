@@ -1,0 +1,53 @@
+name: reply-to-comments
+
+on:
+  schedule:
+    - cron: "15 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  comments:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        channel: [yt1, yt2, yt3, meta]
+    concurrency:
+      group: ms-${{ matrix.channel }}
+      cancel-in-progress: false
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_APP_PASSWORD: ${{ secrets.SMTP_APP_PASSWORD }}
+      ALERT_TO: ${{ secrets.ALERT_TO }}
+      YT1_CLIENT_ID: ${{ secrets.YT1_CLIENT_ID }}
+      YT1_CLIENT_SECRET: ${{ secrets.YT1_CLIENT_SECRET }}
+      YT1_REFRESH_TOKEN: ${{ secrets.YT1_REFRESH_TOKEN }}
+      YT2_CLIENT_ID: ${{ secrets.YT2_CLIENT_ID }}
+      YT2_CLIENT_SECRET: ${{ secrets.YT2_CLIENT_SECRET }}
+      YT2_REFRESH_TOKEN: ${{ secrets.YT2_REFRESH_TOKEN }}
+      YT3_CLIENT_ID: ${{ secrets.YT3_CLIENT_ID }}
+      YT3_CLIENT_SECRET: ${{ secrets.YT3_CLIENT_SECRET }}
+      YT3_REFRESH_TOKEN: ${{ secrets.YT3_REFRESH_TOKEN }}
+      META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+      META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+      META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: pip, cache-dependency-path: requirements-light.txt}
+      - run: pip install -r requirements-light.txt
+      - run: python -m mysterystudio comments --channel ${{ matrix.channel }}
+      - name: Save state
+        if: always()
+        run: |
+          git config user.name "mysterystudio-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add state
+          git diff --cached --quiet && exit 0
+          git commit -m "state: comments ${{ matrix.channel }} [skip ci]"
+          for i in 1 2 3 4; do git pull --rebase -q && git push -q && break || sleep $((i*5)); done

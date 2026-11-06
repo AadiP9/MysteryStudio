@@ -1,0 +1,24 @@
+{
+ "topic": {"kind": "real", "title": "D. B. Cooper", "status": "unsolved", "url": "https://en.wikipedia.org/wiki/D._B._Cooper", "angle": "the only unsolved US air piracy", "source_text": ""},
+ "script": {
+  "title": "The Hijacker Who Vanished Into the Night Sky",
+  "scenes": [
+   {"narration": "A man jumped from a jet in the dark, in the rain, with $200,000. And he was never seen again.", "image_prompt": "a dark passenger jet silhouette flying through storm clouds at night, lightning in the distance, seen from below", "on_screen_text": "", "text_style": "kicker", "impact": true},
+   {"narration": "It was November 24, 1971. A man in a dark suit bought a one-way ticket to Seattle.", "image_prompt": "empty 1970s airport gate at night, rows of vinyl chairs, a single flickering light", "on_screen_text": "NOVEMBER 24, 1971", "text_style": "kicker", "impact": false},
+   {"narration": "He gave his name as Dan Cooper, and told a flight attendant he had a bomb in his briefcase.", "image_prompt": "a lone dark briefcase on an airplane seat, harsh cabin light, close-up", "on_screen_text": "", "text_style": "kicker", "impact": false},
+   {"narration": "His demands were simple. $200,000 in cash, and four parachutes.", "image_prompt": "stacks of old banknotes bundled in a canvas bag on a metal table, dim light, overhead shot", "on_screen_text": "$200,000", "text_style": "big", "impact": false},
+   {"narration": "In Seattle, the passengers were released. The money and parachutes were delivered.", "image_prompt": "a jet parked on a wet night runway, floodlights and fog, wide shot", "on_screen_text": "", "text_style": "kicker", "impact": false},
+   {"narration": "Then the plane took off again, heading toward Mexico City.", "image_prompt": "airplane wing view at night above dark clouds, blinking red light", "on_screen_text": "", "text_style": "kicker", "impact": false},
+   {"narration": "Somewhere over southwest Washington, in darkness and rain, he opened the rear stairs and jumped.", "image_prompt": "dark forest canopy seen from high above at night, rain streaks, faint moonlight", "on_screen_text": "", "text_style": "kicker", "impact": true},
+   {"narration": "No parachute was ever found. No body. Nothing.", "image_prompt": "misty pine forest at dawn, empty, silent, a single beam of light through trees", "on_screen_text": "", "text_style": "kicker", "impact": false},
+   {"narration": "But in 1980, a boy digging by the Columbia River found $5,800 in rotting bundles.", "image_prompt": "river bank sand with decayed bundles of old cash half buried, cold morning light, macro", "on_screen_text": "1980", "text_style": "big", "impact": false},
+   {"narration": "The serial numbers matched the ransom. The rest has never turned up.", "image_prompt": "close-up of a worn banknote serial number under a magnifying glass, shadows", "on_screen_text": "", "text_style": "kicker", "impact": false},
+   {"narration": "The FBI closed its active investigation in 2016, after 45 years.", "image_prompt": "an old filing cabinet drawer in a dim archive room, folders, dust in the air", "on_screen_text": "2016", "text_style": "big", "impact": false},
+   {"narration": "So where did he land? Did he survive? What do you think?", "image_prompt": "a lone dark silhouette of a tree line under a huge pale moon, fog, empty field", "on_screen_text": "", "text_style": "kicker", "impact": true}
+  ],
+  "claims": [],
+  "description": "On a rainy night in 1971, a hijacker demanded a fortune, jumped from a Boeing 727, and disappeared.",
+  "hashtags": ["#mystery", "#unsolved", "#truecrime"],
+  "tags": ["D. B. Cooper", "unsolved mystery", "true crime", "hijacking"]
+ }
+}

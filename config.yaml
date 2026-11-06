@@ -1,0 +1,109 @@
+# ============ MysteryStudio configuration (no secrets here) ============
+timezone: Asia/Kolkata
+site_name: "MysteryStudio"
+
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  min_seconds: 30
+  max_seconds: 90          # stories may be 30-90s; the writer decides per story
+  transition_seconds: 0.18
+
+# First N videos per channel are REVIEW videos: YouTube uploads as PRIVATE and
+# Instagram/Facebook are skipped (video is kept as a downloadable workflow artifact).
+# You watch them, and once quality is confirmed the system goes fully public by itself.
+review:
+  first_n_videos: 20
+
+llm:
+  model: gemini-2.5-flash
+  fallback_models: [gemini-2.5-flash-lite]
+  temperature_writer: 0.9
+  temperature_critic: 0.2
+
+quality:
+  min_each_score: 7        # every criterion must reach this (1-10)
+  min_avg_score: 8.0       # and the average must reach this
+  max_revisions: 3
+  min_words: 90
+  max_words: 230           # ~35-90 s at the chosen speaking speed
+  claim_match_threshold: 88   # fuzzy match % between claim quote and source text
+
+tts:
+  engine: kokoro           # kokoro | edge | fake (fake = silent, for tests)
+  kokoro_voice: am_michael # try: am_michael, am_adam, bm_george, bm_lewis, af_nicole
+  speed: 0.93
+  edge_voice: en-US-GuyNeural
+  pad_seconds: 0.30        # silence after every scene line
+  hook_pad_seconds: 0.55
+
+images:
+  providers: [pollinations, procedural]   # tried in order, procedural never fails
+  style_suffix: >-
+    cinematic dark documentary still, moody low-key lighting, desaturated colour grade,
+    volumetric fog, 35mm film grain, shallow depth of field, vertical 9:16 composition,
+    no people's faces, no text, no watermark, no gore
+  pollinations_model: flux
+  timeout_seconds: 90
+
+look:
+  grain: 0.010
+  vignette: 0.55
+  saturation: 0.72
+  tint: [0.93, 1.00, 1.06]    # per-channel multiplier, BGR order (cool/teal tint)
+  zoom_total: 0.14            # how far the slow camera push goes per scene
+
+captions:
+  font: Anton
+  size: 118
+  words_per_chunk: 3
+  active_color: "00D7FF"      # hex RGB of the highlighted word
+  base_color: "FFFFFF"
+  margin_bottom: 560          # keeps captions above the Shorts/Reels UI
+
+publishing:
+  youtube_category_id: "24"   # 24 = Entertainment
+  youtube_default_language: en
+  contains_synthetic_media: true     # honest AI-visuals disclosure flag on YouTube
+  made_for_kids: false
+  meta_graph_version: v21.0
+
+comments:
+  max_replies_per_run: 15
+  lookback_days: 14
+  channel_owner_reply_style: "warm, short, curious; never argue; never accuse real people"
+
+# ---------------- Posting slots (UTC cron lives in .github/workflows) -------------
+# slot 1 = 09:00 IST, slot 2 = 19:00 IST by default.
+
+# ---------------- Destinations ----------------
+identities:
+  unsolved:
+    mode: real
+    brief: >-
+      real unsolved mysteries: unexplained disappearances, unidentified people, vanished ships and aircraft,
+      cold cases with strange evidence. The case must still be genuinely unresolved or contested.
+  investigations:
+    mode: real
+    brief: >-
+      real criminal investigations with shocking twists: clever detective work, forensic breakthroughs,
+      unexpected culprits, cases solved by a tiny detail, famous heists and cons.
+  psychological:
+    mode: fiction
+    brief: >-
+      original fictional psychological mysteries: unreliable narrators, unsettling small-scale premises,
+      a quiet escalating dread and a twist that recontextualises the first line.
+  social:
+    mode: mixed
+    fiction_ratio: 0.25
+    brief: >-
+      the most gripping, widely-loved mysteries, historical puzzles and strange investigations,
+      plus occasional original fiction.
+
+channels:
+  yt1: {platform: youtube, identity: unsolved,      secret_prefix: YT1, label: "YouTube 1 - Unsolved"}
+  yt2: {platform: youtube, identity: investigations, secret_prefix: YT2, label: "YouTube 2 - Investigations"}
+  yt3: {platform: youtube, identity: psychological, secret_prefix: YT3, label: "YouTube 3 - Psychological"}
+  meta: {platform: meta,   identity: social,        secret_prefix: META, label: "Instagram + Facebook"}
+  # optional per-channel override of the review phase length, e.g.  review_first_n: 6

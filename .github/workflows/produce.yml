@@ -1,0 +1,111 @@
+name: produce-videos
+
+on:
+  schedule:
+    - cron: "30 3 * * *"    # 09:00 IST  -> slot 1
+    - cron: "30 13 * * *"   # 19:00 IST  -> slot 2
+  workflow_dispatch:
+    inputs:
+      channels: {description: "comma separated: yt1,yt2,yt3,meta", default: "yt1,yt2,yt3,meta"}
+      slot: {description: "slot number (1 or 2)", default: "1"}
+      dry_run: {description: "render only, do not publish (true/false)", default: "false"}
+      force: {description: "ignore duplicate protection (true/false)", default: "false"}
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+      slot: ${{ steps.m.outputs.slot }}
+    steps:
+      - id: m
+        run: |
+          CH="${{ github.event.inputs.channels || 'yt1,yt2,yt3,meta' }}"
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            if [ "${{ github.event.schedule }}" = "30 3 * * *" ]; then SLOT=1; else SLOT=2; fi
+          else SLOT="${{ github.event.inputs.slot }}"; fi
+          python3 - <<PY >> "$GITHUB_OUTPUT"
+          import json
+          ch = "$CH".split(",")
+          print("matrix=" + json.dumps({"include": [{"channel": c.strip(), "delay": i * 45} for i, c in enumerate(ch)]}))
+          print("slot=$SLOT")
+          PY
+
+  produce:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    concurrency:
+      group: ms-${{ matrix.channel }}
+      cancel-in-progress: false
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_APP_PASSWORD: ${{ secrets.SMTP_APP_PASSWORD }}
+      ALERT_TO: ${{ secrets.ALERT_TO }}
+      YT1_CLIENT_ID: ${{ secrets.YT1_CLIENT_ID }}
+      YT1_CLIENT_SECRET: ${{ secrets.YT1_CLIENT_SECRET }}
+      YT1_REFRESH_TOKEN: ${{ secrets.YT1_REFRESH_TOKEN }}
+      YT2_CLIENT_ID: ${{ secrets.YT2_CLIENT_ID }}
+      YT2_CLIENT_SECRET: ${{ secrets.YT2_CLIENT_SECRET }}
+      YT2_REFRESH_TOKEN: ${{ secrets.YT2_REFRESH_TOKEN }}
+      YT3_CLIENT_ID: ${{ secrets.YT3_CLIENT_ID }}
+      YT3_CLIENT_SECRET: ${{ secrets.YT3_CLIENT_SECRET }}
+      YT3_REFRESH_TOKEN: ${{ secrets.YT3_REFRESH_TOKEN }}
+      META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+      META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+      META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: pip}
+      - name: System packages
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng
+      - run: pip install -r requirements.txt
+      - name: Cache voice model
+        uses: actions/cache@v4
+        with: {path: models, key: kokoro-v1.0}
+      - name: Stagger start (keeps Gemini free-tier rate limits happy)
+        run: sleep ${{ matrix.delay }}
+      - name: Produce and publish
+        id: produce_step
+        run: |
+          FLAGS=""
+          [ "${{ github.event.inputs.dry_run }}" = "true" ] && FLAGS="$FLAGS --dry-run"
+          [ "${{ github.event.inputs.force }}" = "true" ] && FLAGS="$FLAGS --force"
+          python -m mysterystudio run --channel ${{ matrix.channel }} --slot ${{ needs.plan.outputs.slot }} $FLAGS && code=0 || code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          exit $code
+      - name: Keep review videos and scripts for 7 days
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.channel }}-slot${{ needs.plan.outputs.slot }}
+          path: |
+            out/**/video.mp4
+            out/**/script.json
+            out/**/metadata.json
+          retention-days: 7
+          if-no-files-found: ignore
+      - name: Save state (duplicate protection + topic memory)
+        if: always()
+        run: |
+          git config user.name "mysterystudio-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add state
+          git diff --cached --quiet && exit 0
+          git commit -m "state: ${{ matrix.channel }} slot ${{ needs.plan.outputs.slot }} [skip ci]"
+          for i in 1 2 3 4; do git pull --rebase -q && git push -q && break || sleep $((i*5)); done
+      - name: Email if the job crashed before the app could report (exit code 1 = app already emailed you)
+        if: failure() && steps.produce_step.outputs.code != '1'
+        run: |
+          python - <<'PY'
+          from mysterystudio.notify import alert_error
+          alert_error("${{ matrix.channel }}", "workflow-crash", "The GitHub Actions job failed before or outside the app's own error handling. Open the run link for details.")
+          PY
