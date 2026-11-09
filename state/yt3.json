@@ -28,6 +28,11 @@
    "ts": 1794162391,
    "stage": "production",
    "msg": "    _ = self.client            # fail fast (no retries) if the API key is missing\n        ^^^^^^^^^^^\n  File \"/home/runner/work/MysteryStudio/MysteryStudio/mysterystudio/llm.py\", line 40, in client\n    raise LLMError(\"GEMINI_API_KEY is not set\")\nmysterystudio.llm.LLMError: GEMINI_API_KEY is not set\n"
+  },
+  {
+   "ts": 1794225408,
+   "stage": "production",
+   "msg": "    _ = self.client            # fail fast (no retries) if the API key is missing\n        ^^^^^^^^^^^\n  File \"/home/runner/work/MysteryStudio/MysteryStudio/mysterystudio/llm.py\", line 40, in client\n    raise LLMError(\"GEMINI_API_KEY is not set\")\nmysterystudio.llm.LLMError: GEMINI_API_KEY is not set\n"
   }
  ]
 }
