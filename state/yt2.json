@@ -38,6 +38,11 @@
    "ts": 1794265471,
    "stage": "production",
    "msg": "    _ = self.client            # fail fast (no retries) if the API key is missing\n        ^^^^^^^^^^^\n  File \"/home/runner/work/MysteryStudio/MysteryStudio/mysterystudio/llm.py\", line 40, in client\n    raise LLMError(\"GEMINI_API_KEY is not set\")\nmysterystudio.llm.LLMError: GEMINI_API_KEY is not set\n"
+  },
+  {
+   "ts": 1794310283,
+   "stage": "production",
+   "msg": " 'This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}\n"
   }
  ]
 }
