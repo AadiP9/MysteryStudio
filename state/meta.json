@@ -63,6 +63,11 @@
    "ts": 1794483631,
    "stage": "production",
    "msg": " 'This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}\n"
+  },
+  {
+   "ts": 1794517374,
+   "stage": "production",
+   "msg": " 'This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}\n"
   }
  ]
 }
