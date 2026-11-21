@@ -146,7 +146,10 @@ def write_script(llm, cfg, topic: dict, identity: dict) -> dict:
         fix = (f"{_material(topic)}\n\nCURRENT SCRIPT:\n{json.dumps(script, ensure_ascii=False)}\n\n"
                "PROBLEMS TO FIX (all of them):\n- " + "\n- ".join(problems[:14]) +
                f"\n\n{SCENE_SPEC}\nRewrite the full script fixing every problem. Keep what works; "
-               "make the hook and the twist sharper. Every claim quote must be exact source text.")
+               "make the hook and the twist sharper. STRICT RULE: if a claim has no exact supporting quote in the "
+               "SOURCE TEXT, DELETE that fact from the narration and from 'claims' completely. Do not reword "
+               "it, do not 'soften' it, do not replace it with a similar detail. Prefer fewer facts, all provably in the source. "
+               "Every claim quote must be copied exactly, word for word, from the SOURCE TEXT.")
         script = llm.json(fix, system=WRITER_SYSTEM, temperature=lcfg["temperature_writer"])
     raise ScriptRejected(f"Script for '{topic['title']}' failed quality gate after "
                          f"{q['max_revisions']} revisions. Last problems: {history[-1][:5]}")

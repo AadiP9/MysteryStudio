@@ -71,40 +71,51 @@ class LLM:
         log.info("Discovered Gemini models: %s", self._discovered[:6])
         return self._discovered
 
-    def json(self, prompt: str, system: str | None = None, temperature: float = 0.7, tries: int = 3):
+    def json(self, prompt: str, system: str | None = None, temperature: float = 0.7, tries: int = 2):
         from google.genai import types
         last = None
         _ = self.client            # fail fast (no retries) if the API key is missing
-        tried = []
-        queue = list(self.models)
-        discovered_added = False
-        while queue:
-            model = queue.pop(0)
-            if model in tried:
-                continue
-            tried.append(model)
-            for attempt in range(tries):
-                try:
-                    r = self.client.models.generate_content(
-                        model=model, contents=prompt,
-                        config=types.GenerateContentConfig(
-                            system_instruction=system, temperature=temperature,
-                            response_mime_type="application/json"))
-                    if model != self.models[0]:
-                        log.info("Using Gemini model %s", model)
-                    return _extract_json(r.text)
-                except Exception as e:
-                    last = e
-                    msg = str(e)
-                    log.warning("LLM %s attempt %d failed: %s", model, attempt + 1, msg[:200])
-                    if "API key" in msg or "PERMISSION" in msg or "401" in msg or "403" in msg:
-                        raise LLMError(f"Gemini authentication problem: {msg[:300]}") from e
-                    if self._is_gone(msg):
-                        break            # model retired / unavailable: retrying will never help
-                    if "504" in msg or "DEADLINE" in msg.upper() or "timed out" in msg.lower() or "timeout" in msg.lower():
-                        break            # this model is too slow right now: switch to the next one at once
-                    time.sleep(min(60, 8 * (2 ** attempt)))
-            if not queue and not discovered_added:
-                discovered_added = True
-                queue.extend(self.discover_models()[:4])
+        gone = self.__dict__.setdefault("_gone", set())      # models that returned 404 in this run
+        for pass_no in range(3):                             # free-tier limits recover: wait and sweep again
+            tried = []
+            queue = [m for m in self.models if m not in gone]
+            discovered_added = False
+            transient = False
+            while queue:
+                model = queue.pop(0)
+                if model in tried or model in gone:
+                    continue
+                tried.append(model)
+                for attempt in range(tries):
+                    try:
+                        r = self.client.models.generate_content(
+                            model=model, contents=prompt,
+                            config=types.GenerateContentConfig(
+                                system_instruction=system, temperature=temperature,
+                                response_mime_type="application/json"))
+                        if model != self.models[0]:
+                            log.info("Using Gemini model %s", model)
+                        return _extract_json(r.text)
+                    except Exception as e:
+                        last = e
+                        msg = str(e)
+                        up = msg.upper()
+                        log.warning("LLM %s attempt %d failed: %s", model, attempt + 1, msg[:160])
+                        if "API KEY" in up or "PERMISSION" in up or "UNAUTHENTICATED" in up:
+                            raise LLMError(f"Gemini authentication problem: {msg[:300]}") from e
+                        if self._is_gone(msg):
+                            gone.add(model)
+                            break        # retired model: never retry it
+                        transient = True
+                        if "429" in msg or "RESOURCE_EXHAUSTED" in up or "504" in msg or "DEADLINE" in up \
+                                or "timed out" in msg.lower() or "timeout" in msg.lower():
+                            break        # quota hit or too slow: switch to the next model at once
+                        time.sleep(6 * (attempt + 1))    # 503 etc.: short pause, retry once
+                if not queue and not discovered_added:
+                    discovered_added = True
+                    queue.extend(m for m in self.discover_models()[:4] if m not in gone)
+            if not transient:
+                break
+            log.info("All Gemini models busy or at quota; waiting 45 s before sweep %d", pass_no + 2)
+            time.sleep(45)
         raise LLMError(f"All Gemini models failed. Last error: {last}")
