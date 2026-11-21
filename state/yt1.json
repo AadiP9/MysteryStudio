@@ -17,23 +17,28 @@
  ],
  "topic_pool": [
   {
+   "wiki_title": "Bermuda Triangle",
+   "angle": "Countless ships and aircraft have allegedly vanished without a trace between Florida, Puerto Rico, and Bermuda, inspiring decades of paranormal and scientific speculation.",
+   "status": "disputed"
+  },
+  {
+   "wiki_title": "The Boy in the Box",
+   "angle": "For decades, America's unknown child remained a heartbreaking cold case until forensic genealogy finally put a name to the boy found discarded in a cardboard box.",
+   "status": "solved"
+  },
+  {
+   "wiki_title": "Yuba County Five",
+   "angle": "Five young men with intellectual disabilities inexplicably abandoned their warm car deep in a snowy California mountain forest, walking miles toward a freezing trailer where one starved despite ample canned food.",
+   "status": "unsolved"
+  },
+  {
    "wiki_title": "Lead Masks Case",
    "angle": "Two electronics technicians were found dead on a Brazilian hill wearing handmade lead masks and formal suits, with a notebook containing cryptic instructions about capsules and searching for the dead.",
    "status": "unsolved"
   },
   {
-   "wiki_title": "Disappearance of Frederick Valentich",
-   "angle": "A young pilot radioed that a strange green aircraft was orbiting him before his plane vanished mid-air, with his final transmission cut off by metallic scraping sounds.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "The Man from Taured",
-   "angle": "A mysterious traveler arrived at a Tokyo airport carrying a passport from a country that did not exist, checked into a guarded hotel room, and then vanished into thin air.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Yuba County Five",
-   "angle": "Five young men with intellectual disabilities inexplicably abandoned their warm car deep in a snowy California mountain forest, walking miles toward a freezing trailer where one starved despite ample canned food.",
+   "wiki_title": "Voynich manuscript",
+   "angle": "An illustrated codex written in a completely unknown, uncrackable script features bizarre botanical drawings and astronomical charts that have baffled cryptographers for centuries.",
    "status": "unsolved"
   },
   {
@@ -47,18 +52,8 @@
    "status": "disputed"
   },
   {
-   "wiki_title": "Dyatlov Pass incident",
-   "angle": "Nine experienced hikers cut their way out of their tent in a blizzard and fled half-dressed into the freezing night, leaving behind bizarre radiological traces and fatal, unexplained internal injuries.",
-   "status": "disputed"
-  },
-  {
-   "wiki_title": "Mary Celeste",
-   "angle": "An American merchant brig was found drifting completely abandoned in the Atlantic Ocean in perfect sailing condition, with its cargo untouched and the crew's fate remaining a total enigma.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Tamam Shud case",
-   "angle": "An unidentified man found dead on an Australian beach carried a scrap of paper with the Persian words 'Tamam Shud', leading to a hidden codebook and a decades-long counterintelligence mystery.",
+   "wiki_title": "Villisca axe murders",
+   "angle": "An entire family and two houseguests were bludgeoned to death in their beds by an unknown assailant who locked the house from the inside and left a plate of uneaten food in the attic.",
    "status": "unsolved"
   },
   {
@@ -67,33 +62,23 @@
    "status": "unsolved"
   },
   {
-   "wiki_title": "Somerton Man",
-   "angle": "Recent DNA testing may have finally identified the mysterious man found dead on an Australian beach, yet the true motive behind his elaborate subterfuge remains hidden.",
-   "status": "disputed"
+   "wiki_title": "Oak Island mystery",
+   "angle": "For over two centuries, treasure hunters have risked fortunes digging through a complex, engineered pit filled with booby-trapped flood tunnels, yet the supposed vault remains unreached.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Disappearance of Frederick Valentich",
+   "angle": "A young pilot radioed that a strange green aircraft was orbiting him before his plane vanished mid-air, with his final transmission cut off by metallic scraping sounds.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Mary Celeste",
+   "angle": "An American merchant brig was found drifting completely abandoned in the Atlantic Ocean in perfect sailing condition, with its cargo untouched and the crew's fate remaining a total enigma.",
+   "status": "unsolved"
   },
   {
    "wiki_title": "Black Dahlia",
    "angle": "An aspiring actress was found brutally mutilated and severed in a vacant Los Angeles lot, sparking the largest manhunt in the city's history with no definitive killer ever convicted.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Disappearance of Maura Murray",
-   "angle": "A nursing student packed up her dorm, drove to a remote New Hampshire backroad, crashed her car, and vanished into thin air within a matter of minutes.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Bermuda Triangle",
-   "angle": "Countless ships and aircraft have allegedly vanished without a trace between Florida, Puerto Rico, and Bermuda, inspiring decades of paranormal and scientific speculation.",
-   "status": "disputed"
-  },
-  {
-   "wiki_title": "The Boy in the Box",
-   "angle": "For decades, America's unknown child remained a heartbreaking cold case until forensic genealogy finally put a name to the boy found discarded in a cardboard box.",
-   "status": "solved"
-  },
-  {
-   "wiki_title": "Disappearance of Flight 19",
-   "angle": "Five US Navy torpedo bombers vanished over the Atlantic during a routine training exercise, sparking the enduring legend of the Bermuda Triangle after their compasses malfunctioned.",
    "status": "unsolved"
   },
   {
@@ -102,23 +87,8 @@
    "status": "unsolved"
   },
   {
-   "wiki_title": "Villisca axe murders",
-   "angle": "An entire family and two houseguests were bludgeoned to death in their beds by an unknown assailant who locked the house from the inside and left a plate of uneaten food in the attic.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Voynich manuscript",
-   "angle": "An illustrated codex written in a completely unknown, uncrackable script features bizarre botanical drawings and astronomical charts that have baffled cryptographers for centuries.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Oak Island mystery",
-   "angle": "For over two centuries, treasure hunters have risked fortunes digging through a complex, engineered pit filled with booby-trapped flood tunnels, yet the supposed vault remains unreached.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Hinterkaifeck murders",
-   "angle": "Six people were brutally murdered on an isolated German farm days after the homeowner found strange footprints leading out of the nearby woods into the snow with no return tracks.",
+   "wiki_title": "The Man from Taured",
+   "angle": "A mysterious traveler arrived at a Tokyo airport carrying a passport from a country that did not exist, checked into a guarded hotel room, and then vanished into thin air.",
    "status": "unsolved"
   },
   {
@@ -127,8 +97,28 @@
    "status": "unsolved"
   },
   {
-   "wiki_title": "Kermit Bayless",
-   "angle": "A military pilot's aircraft disappeared over the desert during a routine flight, leaving behind strange radio anomalies and no wreckage to explain his sudden vanishing.",
+   "wiki_title": "Hinterkaifeck murders",
+   "angle": "Six people were brutally murdered on an isolated German farm days after the homeowner found strange footprints leading out of the nearby woods into the snow with no return tracks.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Somerton Man",
+   "angle": "Recent DNA testing may have finally identified the mysterious man found dead on an Australian beach, yet the true motive behind his elaborate subterfuge remains hidden.",
+   "status": "disputed"
+  },
+  {
+   "wiki_title": "Disappearance of Flight 19",
+   "angle": "Five US Navy torpedo bombers vanished over the Atlantic during a routine training exercise, sparking the enduring legend of the Bermuda Triangle after their compasses malfunctioned.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Dyatlov Pass incident",
+   "angle": "Nine experienced hikers cut their way out of their tent in a blizzard and fled half-dressed into the freezing night, leaving behind bizarre radiological traces and fatal, unexplained internal injuries.",
+   "status": "disputed"
+  },
+  {
+   "wiki_title": "Tamam Shud case",
+   "angle": "An unidentified man found dead on an Australian beach carried a scrap of paper with the Persian words 'Tamam Shud', leading to a hidden codebook and a decades-long counterintelligence mystery.",
    "status": "unsolved"
   },
   {
@@ -283,6 +273,16 @@
    "ts": 1795209837,
    "stage": "production",
    "msg": " 'This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}\n"
+  },
+  {
+   "ts": 1795261432,
+   "stage": "quality",
+   "msg": "Script for 'Kenny Bayless' failed quality gate after 3 revisions. Last problems: [\"The user prompt and suggested angle requested a story about a military pilot whose aircraft disappeared over the desert (a completely fictitious/wrong prompt mismatch compared to the real-life source text about boxing referee Kenny Bayless). Furthermore, the prompt states 'REAL CASE: Kenny Bayless (status: unsolved)"
+  },
+  {
+   "ts": 1795261729,
+   "stage": "quality",
+   "msg": "Script for 'Disappearance of Maura Murray' failed quality gate after 3 revisions. Last problems: [\"Claim not found in source text: 'Inside the locked vehicle, an officer found blank accident report forms and a book about mountain climbing'\"]"
   }
  ]
 }
