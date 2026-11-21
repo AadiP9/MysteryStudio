@@ -14,10 +14,26 @@
    "quality": 8.833333333333334,
    "privacy": "private",
    "url": "https://youtube.com/shorts/MkBW219u2kE"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": 2,
+   "title": "The packages at his door had his exact name. (Fiction)",
+   "topic": "Late Delivery",
+   "kind": "fiction",
+   "summary": "A night-shift worker receives strange misplaced packages at his door bearing his exact name. As the deliveries escalate, the final box reveals an unsettling truth about who has been watching him.",
+   "ids": {
+    "youtube": "Ozrpcf9vMYE"
+   },
+   "review": true,
+   "quality": 8.166666666666666,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/Ozrpcf9vMYE"
   }
  ],
  "used_topics": [
-  "Unread Drafts"
+  "Unread Drafts",
+  "Late Delivery"
  ],
  "topic_pool": [
   {
@@ -55,10 +71,6 @@
   {
    "title": "The Lost Roll",
    "premise": "An amateur photographer develops a roll of vintage film found in a thrift store camera, watching images of an unfamiliar bedroom appear in the chemical bath. Her blood runs cold when she spots her own sleeping form in the background of a photo taken decades before she was born."
-  },
-  {
-   "title": "Late Delivery",
-   "premise": "A night-shift worker repeatedly accepts misplaced packages left at his door for a resident with his exact name and birthdate. He opens the final box to find his own personal belongings inside, neatly packed by someone who has clearly been watching him pack."
   },
   {
    "title": "The Echo App",
