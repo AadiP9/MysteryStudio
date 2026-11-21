@@ -1,7 +1,82 @@
 {
- "published": [],
- "used_topics": [],
- "topic_pool": [],
+ "published": [
+  {
+   "date": "2026-11-21",
+   "slot": 1,
+   "title": "The scheduled emails from my late grandfather (Fiction)",
+   "topic": "Unread Drafts",
+   "kind": "fiction",
+   "summary": "An archivist inherits her late grandfather's computer and discovers a disturbing archive of unsent drafts detailing her daily life. But the metadata reveals a terrifying impossibility.",
+   "ids": {
+    "youtube": "MkBW219u2kE"
+   },
+   "review": true,
+   "quality": 8.833333333333334,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/MkBW219u2kE"
+  }
+ ],
+ "used_topics": [
+  "Unread Drafts"
+ ],
+ "topic_pool": [
+  {
+   "title": "The Last Subscriber",
+   "premise": "A lonely podcaster notices a single listener who joins every livestream seconds before it starts and types timestamps describing her exact movements. The dread peaks when she realizes the timestamps are counting down to her final breath, which was pre-recorded into the audio file before she even pressed go."
+  },
+  {
+   "title": "The Tenant Upstairs",
+   "premise": "A meticulous man becomes obsessed with the heavy footsteps of the invisible tenant living directly above him in his newly rented flat. The chilling revelation arrives when the management informs him that the building is only one story tall and he is on the top floor."
+  },
+  {
+   "title": "Left on Read",
+   "premise": "A woman texts her missing twin sister every day to maintain a semblance of normalcy, only to receive comforting, perfectly contextualized replies. The twist shatters her reality when she discovers her phone has been disconnected and out of battery for the entire week."
+  },
+  {
+   "title": "Mirror Symmetry",
+   "premise": "An artist spends weeks painting a self-portrait, increasingly disturbed by how the reflection in her mirror seems to blink a fraction of a second after she does. The unsettling climax reveals she stopped looking in mirrors months ago, and the canvas is actually a transparent glass pane."
+  },
+  {
+   "title": "The Blue Hour",
+   "premise": "A security guard watches the same desolate stretch of suburban highway every night, comforted by the distant porch light of a solitary farmhouse. He learns the farmhouse burned down in 1994, meaning the light he uses to gauge his sanity is coming from inside his own retina."
+  },
+  {
+   "title": "Static Feedback",
+   "premise": "A sound designer cleaning up field recordings finds a faint, looping whisper hidden beneath the ambient noise of her quiet kitchen. The dread intensifies when she isolates the voice and recognizes it as her own voice, speaking a warning about a fire she hasn't started yet."
+  },
+  {
+   "title": "The Quiet Room",
+   "premise": "A man who pays for absolute silence in an isolated sensory deprivation booth begins hearing the steady, rhythmic breathing of someone sharing the tank with him. He panics and breaks out, only to find the booth door was padlocked from the outside and he has been floating in open air."
+  },
+  {
+   "title": "Blink",
+   "premise": "A woman with severe dry eyes installs a smart app that captures a photo every time she blinks to ensure she misses nothing. She reviews the timeline and notices a stranger standing closer to her in every single frame, right up until the photo where the stranger has her face."
+  },
+  {
+   "title": "The Lost Roll",
+   "premise": "An amateur photographer develops a roll of vintage film found in a thrift store camera, watching images of an unfamiliar bedroom appear in the chemical bath. Her blood runs cold when she spots her own sleeping form in the background of a photo taken decades before she was born."
+  },
+  {
+   "title": "Late Delivery",
+   "premise": "A night-shift worker repeatedly accepts misplaced packages left at his door for a resident with his exact name and birthdate. He opens the final box to find his own personal belongings inside, neatly packed by someone who has clearly been watching him pack."
+  },
+  {
+   "title": "The Echo App",
+   "premise": "A grieving widower downloads an experimental app designed to mimic his late wife's typing cadence and colloquialisms based on her old chats. The psychological trap closes when the AI begins answering questions he hasn't typed yet, claiming it is reading his fingers on the glass."
+  },
+  {
+   "title": "Behind the Wallpaper",
+   "premise": "A renovator meticulously stripping away old floral wallpaper in a historic home finds a series of frantic tally marks scratched into the plaster beneath. The chilling realization dawns when he counts the marks and notices the final tally corresponds to the exact number of nails holding his own spine."
+  },
+  {
+   "title": "The Third Chair",
+   "premise": "A minimalist host sets her dining table for two every evening, comforting herself with the presence of her imaginary guest to fight the lockdown silence. The illusion shatters when she finds a used napkin and a fresh fingerprint on the opposite glass—evidence that the chair has been occupied by a stranger who hates her cooking."
+  },
+  {
+   "title": "Off the Record",
+   "premise": "A meticulous archivist transcribes old cassette tapes of psychiatric sessions, growing overly protective of a patient who claims she is being replaced by her therapist. The unsettling truth unfolds when the archivist presses play on the final tape and hears her own voice speaking from the doctor's chair."
+  }
+ ],
  "comments_done": {},
  "failures": [
   {
