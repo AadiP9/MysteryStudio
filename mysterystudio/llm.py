@@ -101,6 +101,8 @@ class LLM:
                         raise LLMError(f"Gemini authentication problem: {msg[:300]}") from e
                     if self._is_gone(msg):
                         break            # model retired / unavailable: retrying will never help
+                    if "504" in msg or "DEADLINE" in msg.upper() or "timed out" in msg.lower() or "timeout" in msg.lower():
+                        break            # this model is too slow right now: switch to the next one at once
                     time.sleep(min(60, 8 * (2 ** attempt)))
             if not queue and not discovered_added:
                 discovered_added = True
