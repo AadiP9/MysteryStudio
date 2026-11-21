@@ -36,10 +36,11 @@ class LLM:
     def client(self):
         if self._client is None:
             from google import genai
+            from google.genai import types as _t
             key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
             if not key:
                 raise LLMError("GEMINI_API_KEY is not set")
-            self._client = genai.Client(api_key=key)
+            self._client = genai.Client(api_key=key, http_options=_t.HttpOptions(timeout=150_000))  # 150 s per call, never hang
         return self._client
 
     @staticmethod

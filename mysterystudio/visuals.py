@@ -149,14 +149,20 @@ def _pollinations(prompt: str, cfg, seed: int) -> np.ndarray | None:
 
 def scene_images(cfg, script: dict) -> list[np.ndarray]:
     out = []
+    poll_fails = 0          # circuit breaker: if the free image service keeps failing, stop waiting on it
+    t_start = time.time()
     base_seed = int(hashlib.md5(script["title"].encode()).hexdigest()[:8], 16)
     for i, sc in enumerate(script["scenes"]):
         img = None
         for prov in cfg["images"]["providers"]:
             if prov == "pollinations":
+                if poll_fails >= 2 or time.time() - t_start > cfg["images"].get("max_total_seconds", 240):
+                    continue
                 img = _pollinations(sc["image_prompt"], cfg, base_seed + i)
             elif prov == "procedural":
                 img = procedural(sc["image_prompt"], base_seed + i)
+            if prov == "pollinations":
+                poll_fails = 0 if img is not None else poll_fails + 1
             if img is not None:
                 log.info("Scene %d image via %s", i, prov)
                 break

@@ -75,6 +75,7 @@ jobs:
         run: sleep ${{ matrix.delay }}
       - name: Produce and publish
         id: produce_step
+        timeout-minutes: 30
         run: |
           FLAGS=""
           [ "${{ github.event.inputs.dry_run }}" = "true" ] && FLAGS="$FLAGS --dry-run"

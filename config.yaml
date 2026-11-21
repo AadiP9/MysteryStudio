@@ -45,7 +45,8 @@ images:
     volumetric fog, 35mm film grain, shallow depth of field, vertical 9:16 composition,
     no people's faces, no text, no watermark, no gore
   pollinations_model: flux
-  timeout_seconds: 90
+  timeout_seconds: 40
+  max_total_seconds: 240   # after this, remaining scenes use the procedural backdrops
 
 look:
   grain: 0.010
