@@ -11,10 +11,23 @@
    "review": true,
    "quality": 8.5,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": 2,
+   "title": "The Memory Broker's Vault (Fiction)",
+   "topic": "The Memory Broker's Vault",
+   "kind": "fiction",
+   "summary": "Seeking an escape from isolation, a woman purchases an illicit vial containing a warm childhood picnic. But as the sensory memory sets in, the warmth turns into an unbearable weight.",
+   "ids": {},
+   "review": true,
+   "quality": 8.0,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
-  "The Portrait of Maya"
+  "The Portrait of Maya",
+  "The Memory Broker's Vault"
  ],
  "topic_pool": [
   {
@@ -24,10 +37,6 @@
   {
    "title": "Acoustic Wallpaper",
    "premise": "A sound engineer rents a cheap minimalist apartment that inexplicably dampens all noise from the outside world. He discovers the walls are woven from millions of human hair strands that are broadcasting the dying whispers of the building's previous tenants."
-  },
-  {
-   "title": "The Memory Broker's Vault",
-   "premise": "A woman buys a memory vial of a happy childhood picnic to cure her chronic loneliness, but the sensory details feel intensely claustrophobic. She realizes she didn't buy a happy memory; she bought the exact perspective of the person buried underneath the picnic blanket."
   },
   {
    "title": "Retinal Lag",
