@@ -17,8 +17,8 @@ review:
   first_n_videos: 20
 
 llm:
-  model: gemini-2.5-flash
-  fallback_models: [gemini-2.5-flash-lite]
+  model: gemini-3.8-flash
+  fallback_models: [gemini-3.5-flash-lite]   # if both are retired, the code auto-discovers a working model
   temperature_writer: 0.9
   temperature_critic: 0.2
 

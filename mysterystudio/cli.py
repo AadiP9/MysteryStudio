@@ -19,6 +19,16 @@ def _now(cfg):
     return dt.datetime.now(tz(cfg))
 
 
+def _missing_creds(cfg, channel: str) -> list[str]:
+    """Names of publishing secrets that are not set for this channel (empty list = ready)."""
+    import os
+    ch = cfg["channels"][channel]
+    p = ch["secret_prefix"]
+    names = ([f"{p}_CLIENT_ID", f"{p}_CLIENT_SECRET", f"{p}_REFRESH_TOKEN"] if ch["platform"] == "youtube"
+             else ["META_PAGE_ID", "META_IG_USER_ID", "META_PAGE_TOKEN"])
+    return [n for n in names if not os.getenv(n)]
+
+
 def cmd_run(args) -> int:
     # heavy imports live here so the light 'comments' / 'report' jobs install and start fast
     from . import pipeline, scriptgen
@@ -31,6 +41,11 @@ def cmd_run(args) -> int:
     date = args.date or _now(cfg).date().isoformat()
     if not args.force and state.slot_done(date, args.slot):
         log.info("%s slot %s on %s already produced - skipping (duplicate protection)", args.channel, args.slot, date)
+        return 0
+    missing = _missing_creds(cfg, args.channel)
+    if missing and not args.dry_run:
+        log.warning("%s skipped: secrets not set yet (%s). Add them in GitHub to switch this channel on.",
+                    args.channel, ", ".join(missing))
         return 0
     review_n = ch.get("review_first_n", cfg["review"]["first_n_videos"])
     review = state.count_published() < review_n
@@ -121,6 +136,10 @@ def cmd_run(args) -> int:
 def cmd_comments(args) -> int:
     cfg = load_config()
     ch = cfg["channels"][args.channel]
+    missing = _missing_creds(cfg, args.channel)
+    if missing:
+        log.warning("%s comments skipped: secrets not set yet (%s)", args.channel, ", ".join(missing))
+        return 0
     state = State(args.channel)
     llm = LLM(cfg)
     try:

@@ -37,5 +37,6 @@ def run_url() -> str:
 
 
 def alert_error(channel: str, stage: str, detail: str) -> None:
+    log.error("ALERT %s / %s: %s", channel, stage, detail[-1500:])   # visible in the GitHub Actions log too
     send_email(f"[MysteryStudio] ERROR on {channel} at {stage}",
                f"Channel: {channel}\nStage: {stage}\nRun: {run_url()}\n\n{detail[-3500:]}")

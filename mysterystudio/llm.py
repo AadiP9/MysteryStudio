@@ -30,6 +30,7 @@ class LLM:
         self.cfg = cfg
         self.models = [cfg["llm"]["model"], *cfg["llm"].get("fallback_models", [])]
         self._client = None
+        self._discovered = None
 
     @property
     def client(self):
@@ -41,11 +42,46 @@ class LLM:
             self._client = genai.Client(api_key=key)
         return self._client
 
+    @staticmethod
+    def _is_gone(msg: str) -> bool:
+        m = msg.lower()
+        return ("404" in m or "not_found" in m or "no longer available" in m or "is not found" in m
+                or "not supported for generatecontent" in m)
+
+    def discover_models(self) -> list[str]:
+        """Ask the API which text models this key can use right now (newest 'flash' first).
+        Protects the pipeline from Google retiring a model name again."""
+        if self._discovered is not None:
+            return self._discovered
+        found = []
+        try:
+            for m in self.client.models.list():
+                name = (getattr(m, "name", "") or "").replace("models/", "")
+                actions = getattr(m, "supported_actions", None) or []
+                if actions and "generateContent" not in actions:
+                    continue
+                mm = re.fullmatch(r"gemini-(\d+(?:\.\d+)?)-(flash|flash-lite)", name)
+                if mm:
+                    found.append((float(mm.group(1)), mm.group(2) == "flash", name))
+        except Exception as e:
+            log.warning("Could not list Gemini models: %s", str(e)[:200])
+        found.sort(reverse=True)        # newest version first, plain flash before flash-lite
+        self._discovered = [n for _, _, n in found]
+        log.info("Discovered Gemini models: %s", self._discovered[:6])
+        return self._discovered
+
     def json(self, prompt: str, system: str | None = None, temperature: float = 0.7, tries: int = 3):
         from google.genai import types
         last = None
         _ = self.client            # fail fast (no retries) if the API key is missing
-        for model in self.models:
+        tried = []
+        queue = list(self.models)
+        discovered_added = False
+        while queue:
+            model = queue.pop(0)
+            if model in tried:
+                continue
+            tried.append(model)
             for attempt in range(tries):
                 try:
                     r = self.client.models.generate_content(
@@ -53,6 +89,8 @@ class LLM:
                         config=types.GenerateContentConfig(
                             system_instruction=system, temperature=temperature,
                             response_mime_type="application/json"))
+                    if model != self.models[0]:
+                        log.info("Using Gemini model %s", model)
                     return _extract_json(r.text)
                 except Exception as e:
                     last = e
@@ -60,5 +98,10 @@ class LLM:
                     log.warning("LLM %s attempt %d failed: %s", model, attempt + 1, msg[:200])
                     if "API key" in msg or "PERMISSION" in msg or "401" in msg or "403" in msg:
                         raise LLMError(f"Gemini authentication problem: {msg[:300]}") from e
+                    if self._is_gone(msg):
+                        break            # model retired / unavailable: retrying will never help
                     time.sleep(min(60, 8 * (2 ** attempt)))
+            if not queue and not discovered_added:
+                discovered_added = True
+                queue.extend(self.discover_models()[:4])
         raise LLMError(f"All Gemini models failed. Last error: {last}")
