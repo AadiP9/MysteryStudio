@@ -81,6 +81,9 @@ def cmd_run(args) -> int:
 
     if args.dry_run:
         log.info("Dry run: video at %s, not publishing", video)
+        notify.send_email(f"[MysteryStudio] Test video: {args.channel} - {meta['title']}",
+                          f"Dry run (not published).\nTitle: {meta['title']}\nQuality score: {rec['quality']}\n"
+                          f"Run: {notify.run_url()}", attachments=[video])
         return 0
     try:
         if ch["platform"] == "youtube":
@@ -119,7 +122,8 @@ def cmd_run(args) -> int:
                               f"Title: {meta['title']}\nQuality score: {rec['quality']}\n"
                               f"{rec.get('url', 'Download the video from the workflow run artifacts')}\n"
                               f"Run: {notify.run_url()}\n"
-                              f"Review videos so far on this channel: {state.count_published()} / {review_n}")
+                              f"Review videos so far on this channel: {state.count_published()} / {review_n}",
+                              attachments=[video])
         return 0
     except (AuthError, QuotaError) as e:
         state.log_failure("publish", str(e))

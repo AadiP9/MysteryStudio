@@ -9,7 +9,7 @@ from email.message import EmailMessage
 from .config import log
 
 
-def send_email(subject: str, body: str) -> bool:
+def send_email(subject: str, body: str, attachments=None) -> bool:
     user = os.getenv("SMTP_USER")
     pwd = os.getenv("SMTP_APP_PASSWORD")
     to = os.getenv("ALERT_TO") or user
@@ -19,6 +19,16 @@ def send_email(subject: str, body: str) -> bool:
     msg = EmailMessage()
     msg["From"], msg["To"], msg["Subject"] = user, to, subject
     msg.set_content(body)
+    for a in attachments or []:             # e.g. the review video (Gmail allows ~25 MB per email)
+        try:
+            from pathlib import Path
+            pa = Path(a)
+            if pa.exists() and pa.stat().st_size < 22 * 1024 * 1024:
+                msg.add_attachment(pa.read_bytes(), maintype="video", subtype="mp4", filename=pa.name)
+            else:
+                log.warning("Attachment %s skipped (missing or over 22 MB)", a)
+        except Exception as e:
+            log.warning("Could not attach %s: %s", a, e)
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ssl.create_default_context(), timeout=30) as s:
             s.login(user, pwd)
