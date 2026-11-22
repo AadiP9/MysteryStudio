@@ -176,7 +176,7 @@ def scene_images(cfg, script: dict, topic: dict | None = None) -> list[np.ndarra
     if topic and topic.get("kind") == "real" and "wikimedia" in ic["providers"]:
         title = imagesrc.wiki_title_from_url(topic.get("url", "")) or topic.get("title")
         photos = imagesrc.wikipedia_photos(title, limit=ic.get("max_real_photos", 4)) if title else []
-        slots = [round(k * (n - 2) / max(1, len(photos))) + 1 for k in range(len(photos))]
+        slots = sorted({int(round(x)) for x in np.linspace(1, max(1, n - 2), len(photos))}) if photos else []
         for slot, (img, credit) in zip(slots, photos):
             if slot not in real and 0 < slot < n - 1:
                 real[slot] = (img, credit)
