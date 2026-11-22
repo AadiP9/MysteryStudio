@@ -8,6 +8,10 @@ from rapidfuzz import fuzz
 
 from .config import log
 
+GRAPHIC_TERMS = (r"mutilat\w*|dismember\w*|decapitat\w*|disembowel\w*|bisect\w*|bisection|severed|slash(?:ed|ing)|"
+                 r"gruesome|gory|gore|torture\w*|rape\w*|rapist|sexual(?:ly)? assault\w*|molest\w*|"
+                 r"strangl\w*|smother\w*|suffocat\w*|butcher\w*|corpse|entrails|genital\w*|decompos\w*")
+
 WRITER_SYSTEM = """You are an award-winning documentary scriptwriter for vertical mystery videos
 (YouTube Shorts / Reels). You write for the EAR: short sentences, concrete details, calm authority.
 
@@ -25,6 +29,9 @@ RULES:
 - Never imply guilt of a real, named person unless a conviction/official finding is in the source.
   For unsolved cases do not name unconvicted suspects.
 - No gore, no graphic detail, respectful of victims. No invented dialogue for real people.
+- ADVERTISER-FRIENDLY: never describe mutilation, dismemberment, bisection, torture, sexual violence,
+  strangling/smothering or the condition of a body. Say "was found dead" or "was killed". Do not use words like
+  gruesome, brutal, severed, slashed, corpse. Suspense comes from unanswered questions, not from injuries.
 - Use only facts present in the SOURCE TEXT for real cases. Do not invent anything.
 - Numbers: write them as digits ("1971", "$200,000"); the voice engine reads them correctly.
 - Each scene = 1-2 sentences of narration (6-22 words) plus a visual.
@@ -99,6 +106,10 @@ def deterministic_checks(script: dict, topic: dict, qcfg: dict) -> list[str]:
         for num in set(re.findall(r"\d[\d,\.]*\d|\d", narr)):
             if num.replace(",", "") not in src.replace(",", ""):
                 problems.append(f"Number '{num}' does not appear in the source text.")
+    text = (script.get("title", "") + " " + " ".join(s["narration"] for s in script["scenes"])).lower()
+    hits = sorted(set(m.group(0) for m in re.finditer(r"\b(?:" + GRAPHIC_TERMS + r")\b", text)))
+    if hits:
+        problems.append(f"Graphic wording is not allowed (advertiser-friendly rule): {hits[:6]}. Rephrase gently or cut it.")
     for s in script["scenes"]:
         if re.search(r"\b(blood|gore|corpse|mutilat)", s["image_prompt"].lower()):
             problems.append("Image prompt contains graphic terms; use symbolic imagery instead.")

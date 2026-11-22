@@ -133,7 +133,7 @@ def _pollinations(prompt: str, cfg, seed: int) -> np.ndarray | None:
     full = f"{prompt}. {' '.join(ic['style_suffix'].split())}"
     url = ("https://image.pollinations.ai/prompt/" + urllib.parse.quote(full) +
            f"?width=1080&height=1920&model={ic['pollinations_model']}&nologo=true&seed={seed}&private=true")
-    for attempt in range(2):
+    for attempt in range(3):
         try:
             r = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=ic["timeout_seconds"])
             if r.status_code == 200 and r.headers.get("content-type", "").startswith("image"):
@@ -143,7 +143,7 @@ def _pollinations(prompt: str, cfg, seed: int) -> np.ndarray | None:
             log.warning("Pollinations HTTP %s (attempt %d)", r.status_code, attempt + 1)
         except Exception as e:
             log.warning("Pollinations error: %s", str(e)[:120])
-        time.sleep(4)
+        time.sleep(15)          # the free service rate-limits anonymous callers: go slowly
     return None
 
 
@@ -156,7 +156,7 @@ def scene_images(cfg, script: dict) -> list[np.ndarray]:
         img = None
         for prov in cfg["images"]["providers"]:
             if prov == "pollinations":
-                if poll_fails >= 2 or time.time() - t_start > cfg["images"].get("max_total_seconds", 240):
+                if poll_fails >= 3 or time.time() - t_start > cfg["images"].get("max_total_seconds", 240):
                     continue
                 img = _pollinations(sc["image_prompt"], cfg, base_seed + i)
             elif prov == "procedural":
@@ -167,5 +167,5 @@ def scene_images(cfg, script: dict) -> list[np.ndarray]:
                 log.info("Scene %d image via %s", i, prov)
                 break
         out.append(img)
-        time.sleep(1.0)
+        time.sleep(12.0 if img is not None and prov == "pollinations" else 1.0)
     return out

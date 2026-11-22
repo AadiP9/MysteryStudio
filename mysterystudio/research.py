@@ -76,6 +76,11 @@ def pick_real_topic(llm, state, identity: dict) -> dict:
                 art = wiki_extract(found) if found else None
             if not art or state.topic_used(art["title"]):
                 continue
+            if len(re.findall(r"mutilat|dismember|decapitat|disembowel|bisect|torture|rape|sexual assault|molest",
+                              art["text"].lower())) >= 3:
+                log.info("Skipping '%s': source is too graphic for advertiser-friendly videos", art["title"])
+                state.mark_topic(art["title"])
+                continue
             return {"kind": "real", "title": art["title"], "angle": item.get("angle", ""),
                     "status": item.get("status", "unknown"), "url": art["url"],
                     "source_text": art["text"]}
