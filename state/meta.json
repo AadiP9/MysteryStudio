@@ -23,11 +23,24 @@
    "review": true,
    "quality": 8.0,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": 1,
+   "title": "The reflection that moved a second too late (Fiction)",
+   "topic": "Mirror Symmetry",
+   "kind": "fiction",
+   "summary": "A man installs a massive antique mirror in his hallway and notices a subtle delay in his reflection's movements. When he tries to test the glass in the dark, he uncovers something truly terrifying.",
+   "ids": {},
+   "review": true,
+   "quality": 8.333333333333334,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
   "The Portrait of Maya",
-  "The Memory Broker's Vault"
+  "The Memory Broker's Vault",
+  "Mirror Symmetry"
  ],
  "topic_pool": [
   {
@@ -49,10 +62,6 @@
   {
    "title": "Echoes of the Estate",
    "premise": "A professional house-sitter lives in a smart mansion that logs every sound to 'optimize home comfort.' The daily report flags an unauthorized voice whispering inside the walls, but the investigation reveals the voice isn't a trespasser—it's the house predicting what the sitter will say ten minutes before she speaks."
-  },
-  {
-   "title": "Mirror Symmetry",
-   "premise": "A man installs a massive antique mirror in his narrow hallway, noticing that his reflection moves a fraction of a second too late. He tests it by hiding in the dark, only to watch his reflection step out of the glass to search for him."
   },
   {
    "title": "The Sleepwalker's Journal",
