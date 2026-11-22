@@ -29,11 +29,27 @@
    "quality": 8.166666666666666,
    "privacy": "private",
    "url": "https://youtube.com/shorts/Ozrpcf9vMYE"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": 1,
+   "title": "The Third Chair That Was Never Empty (Fiction)",
+   "topic": "The Third Chair",
+   "kind": "fiction",
+   "summary": "A minimalist host sets her dining table for two every evening to fight the lockdown silence. The illusion shatters when she finds undeniable proof that someone has been sharing her meals.",
+   "ids": {
+    "youtube": "lA9zTyUo3W0"
+   },
+   "review": true,
+   "quality": 8.166666666666666,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/lA9zTyUo3W0"
   }
  ],
  "used_topics": [
   "Unread Drafts",
-  "Late Delivery"
+  "Late Delivery",
+  "The Third Chair"
  ],
  "topic_pool": [
   {
@@ -79,10 +95,6 @@
   {
    "title": "Behind the Wallpaper",
    "premise": "A renovator meticulously stripping away old floral wallpaper in a historic home finds a series of frantic tally marks scratched into the plaster beneath. The chilling realization dawns when he counts the marks and notices the final tally corresponds to the exact number of nails holding his own spine."
-  },
-  {
-   "title": "The Third Chair",
-   "premise": "A minimalist host sets her dining table for two every evening, comforting herself with the presence of her imaginary guest to fight the lockdown silence. The illusion shatters when she finds a used napkin and a fresh fingerprint on the opposite glass—evidence that the chair has been occupied by a stranger who hates her cooking."
   },
   {
    "title": "Off the Record",
