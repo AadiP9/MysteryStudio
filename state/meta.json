@@ -44,28 +44,16 @@
  ],
  "topic_pool": [
   {
-   "title": "The 11:14 Loop",
-   "premise": "A commuter realizes every passenger on her train car is performing the exact same micro-gestures in unison. When she breaks the sequence by coughing, the train plunges into darkness and all passengers turn to her with her own voice, demanding to know why she missed her cue."
-  },
-  {
-   "title": "Acoustic Wallpaper",
-   "premise": "A sound engineer rents a cheap minimalist apartment that inexplicably dampens all noise from the outside world. He discovers the walls are woven from millions of human hair strands that are broadcasting the dying whispers of the building's previous tenants."
-  },
-  {
-   "title": "Retinal Lag",
-   "premise": "An optometrist fits a patient with a revolutionary smart-lens that claims to correct astigmatism instantly. Over the next week, the patient notices objects in her peripheral vision lagging behind reality by two seconds—until she sees herself standing behind her, waiting for her to move out of the way."
-  },
-  {
    "title": "The Quietest Town",
    "premise": "A linguistic researcher visits a remote village where inhabitants only speak in low, deliberate whispers. She thinks it's a reverence for nature, until she records the local lullaby and plays it backward to find it is actually a countdown timer for when the town's guardian falls asleep."
   },
   {
-   "title": "Echoes of the Estate",
-   "premise": "A professional house-sitter lives in a smart mansion that logs every sound to 'optimize home comfort.' The daily report flags an unauthorized voice whispering inside the walls, but the investigation reveals the voice isn't a trespasser—it's the house predicting what the sitter will say ten minutes before she speaks."
+   "title": "The Inkless Ledger",
+   "premise": "An archivist cataloging municipal tax records from 1850 finds a blank ledger that suddenly grows dark ink lines whenever she places her bare palm on the page. The ledger begins accurately recording her own future financial transactions down to the exact minute."
   },
   {
-   "title": "The Sleepwalker's Journal",
-   "premise": "A chronic insomniac uses a sleep-tracking app that reconstructs his midnight movements into a 3D animated simulation. He watches himself walk to the basement every night and bury identical metal boxes, only to wake up and find his childhood bedroom filled with them."
+   "title": "Echoes of the Estate",
+   "premise": "A professional house-sitter lives in a smart mansion that logs every sound to 'optimize home comfort.' The daily report flags an unauthorized voice whispering inside the walls, but the investigation reveals the voice isn't a trespasser—it's the house predicting what the sitter will say ten minutes before she speaks."
   },
   {
    "title": "The Castaway Signal",
@@ -76,20 +64,28 @@
    "premise": "A security guard watches live feeds of a high-security archive, noticing that every camera drops signal for one microsecond precisely at midnight. When he syncs a high-speed drone camera to bypass the blackout, he sees that the entire archive room is actually a colossal, shifting eye."
   },
   {
-   "title": "The Inkless Ledger",
-   "premise": "An archivist cataloging municipal tax records from 1850 finds a blank ledger that suddenly grows dark ink lines whenever she places her bare palm on the page. The ledger begins accurately recording her own future financial transactions down to the exact minute."
+   "title": "The Sleepwalker's Journal",
+   "premise": "A chronic insomniac uses a sleep-tracking app that reconstructs his midnight movements into a 3D animated simulation. He watches himself walk to the basement every night and bury identical metal boxes, only to wake up and find his childhood bedroom filled with them."
   },
   {
-   "title": "Subway Etiquette",
-   "premise": "A late-night commuter plays a silent puzzle game on her phone, completely ignoring a stranger sitting opposite her who is desperately trying to mime a warning. When she finally looks up from her screen, she realizes she is the only living passenger, and the 'stranger' is her own reflection trapped in the tunnel glass."
+   "title": "Retinal Lag",
+   "premise": "An optometrist fits a patient with a revolutionary smart-lens that claims to correct astigmatism instantly. Over the next week, the patient notices objects in her peripheral vision lagging behind reality by two seconds—until she sees herself standing behind her, waiting for her to move out of the way."
   },
   {
    "title": "The Last Broadcast",
    "premise": "A podcaster obsessed with dead-air pirate radio stations tracks down a signal that plays only the sound of heavy breathing. He broadcasts it live, only to realize the breathing isn't coming from the tape—it's filling his soundproof booth from the ventilation shaft."
   },
   {
-   "title": "Static Horizon",
-   "premise": "A landscape photographer sets up a time-lapse camera overlooking a remote valley to capture the changing fog patterns. When reviewing the footage, the mountains remain completely still while the sky behind them slowly peels away like wallpaper, revealing an industrial ceiling."
+   "title": "The 11:14 Loop",
+   "premise": "A commuter realizes every passenger on her train car is performing the exact same micro-gestures in unison. When she breaks the sequence by coughing, the train plunges into darkness and all passengers turn to her with her own voice, demanding to know why she missed her cue."
+  },
+  {
+   "title": "Acoustic Wallpaper",
+   "premise": "A sound engineer rents a cheap minimalist apartment that inexplicably dampens all noise from the outside world. He discovers the walls are woven from millions of human hair strands that are broadcasting the dying whispers of the building's previous tenants."
+  },
+  {
+   "title": "Subway Etiquette",
+   "premise": "A late-night commuter plays a silent puzzle game on her phone, completely ignoring a stranger sitting opposite her who is desperately trying to mime a warning. When she finally looks up from her screen, she realizes she is the only living passenger, and the 'stranger' is her own reflection trapped in the tunnel glass."
   }
  ],
  "comments_done": {},
@@ -238,6 +234,11 @@
    "ts": 1795209967,
    "stage": "production",
    "msg": " 'This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}\n"
+  },
+  {
+   "ts": 1795379273,
+   "stage": "production",
+   "msg": " topic = picker(llm, state, identity)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/MysteryStudio/MysteryStudio/mysterystudio/research.py\", line 71, in pick_real_topic\n    if state.topic_used(item[\"wiki_title\"]):\n                        ~~~~^^^^^^^^^^^^^^\nKeyError: 'wiki_title'\n"
   }
  ]
 }
