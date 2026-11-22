@@ -23,6 +23,14 @@ def send_email(subject: str, body: str, attachments=None) -> bool:
         try:
             from pathlib import Path
             pa = Path(a)
+            if pa.exists() and pa.stat().st_size >= 22 * 1024 * 1024:
+                small = pa.with_name(pa.stem + "_preview.mp4")      # email-sized copy; the upload uses the original
+                import subprocess
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(pa), "-vf", "scale=720:-2",
+                                "-c:v", "libx264", "-preset", "veryfast", "-crf", "29", "-c:a", "aac",
+                                "-b:a", "96k", str(small)], check=False)
+                if small.exists():
+                    pa = small
             if pa.exists() and pa.stat().st_size < 22 * 1024 * 1024:
                 msg.add_attachment(pa.read_bytes(), maintype="video", subtype="mp4", filename=pa.name)
             else:
