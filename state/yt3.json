@@ -44,12 +44,28 @@
    "quality": 8.166666666666666,
    "privacy": "private",
    "url": "https://youtube.com/shorts/lA9zTyUo3W0"
+  },
+  {
+   "date": "2026-11-23",
+   "slot": 2,
+   "title": "the app that photographed every blink (Fiction)",
+   "topic": "Blink",
+   "kind": "fiction",
+   "summary": "A woman tracking her dry eye symptoms with an automated camera app discovers horrifying incremental movements in the darkness. As she scrolls through her nightly logs, the distance between frames shrinks.",
+   "ids": {
+    "youtube": "XQOwmUvXY1A"
+   },
+   "review": true,
+   "quality": 8.666666666666666,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/XQOwmUvXY1A"
   }
  ],
  "used_topics": [
   "Unread Drafts",
   "Late Delivery",
-  "The Third Chair"
+  "The Third Chair",
+  "Blink"
  ],
  "topic_pool": [
   {
@@ -79,10 +95,6 @@
   {
    "title": "The Quiet Room",
    "premise": "A man who pays for absolute silence in an isolated sensory deprivation booth begins hearing the steady, rhythmic breathing of someone sharing the tank with him. He panics and breaks out, only to find the booth door was padlocked from the outside and he has been floating in open air."
-  },
-  {
-   "title": "Blink",
-   "premise": "A woman with severe dry eyes installs a smart app that captures a photo every time she blinks to ensure she misses nothing. She reviews the timeline and notices a stranger standing closer to her in every single frame, right up until the photo where the stranger has her face."
   },
   {
    "title": "The Lost Roll",
