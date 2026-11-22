@@ -35,9 +35,13 @@ RULES:
 - Use only facts present in the SOURCE TEXT for real cases. Do not invent anything.
 - Numbers: write them as digits ("1971", "$200,000"); the voice engine reads them correctly.
 - Each scene = 1-2 sentences of narration (6-22 words) plus a visual.
-- IMAGE PROMPTS: atmospheric, cinematic, symbolic scenes of places, objects, weather, documents,
-  silhouettes seen from behind or far away. NEVER faces, NEVER real people, NEVER readable text.
-  Describe: subject, setting, lighting, camera angle. Vary shots (wide, close-up, overhead, detail)."""
+- IMAGE PROMPTS: each must depict what THIS scene's narration is literally about, so a viewer sees the story:
+  the specific place, era, vehicle, building, object, weather or document the narrator just mentioned
+  (e.g. "1971 Boeing 727 on a dark runway at night, rain" for a hijacking scene; "empty 1940s Los Angeles
+  vacant lot at dawn, fog" for a body-discovery scene). Always include the era/location. Silhouettes seen
+  from behind or far away are fine. NEVER faces, NEVER real people, NEVER readable text.
+  Describe: subject, setting, lighting, camera angle. Vary shots (wide, close-up, overhead, detail).
+  Never reuse the same subject in two scenes."""
 
 SCENE_SPEC = """Return JSON with exactly this structure:
 {

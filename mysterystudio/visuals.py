@@ -9,6 +9,7 @@ import cv2
 import numpy as np
 import requests
 
+from . import imagesrc
 from .config import USER_AGENT, log
 
 SRC_W, SRC_H = 1296, 2304          # 20% larger than 1080x1920 so the camera can move
@@ -131,6 +132,18 @@ def _cover(img: np.ndarray) -> np.ndarray:
     return img[y0:y0 + SRC_H, x0:x0 + SRC_W]
 
 
+def _fit_blur(img: np.ndarray) -> np.ndarray:
+    """Real photos are rarely vertical: show the whole photo over a blurred, darkened copy of itself."""
+    bg = cv2.GaussianBlur(_cover(img), (0, 0), 38)
+    bg = (bg * 0.45).astype(np.uint8)
+    h, w = img.shape[:2]
+    s = min(SRC_W * 0.94 / w, SRC_H * 0.62 / h)
+    fg = cv2.resize(img, (int(w * s), int(h * s)), interpolation=cv2.INTER_AREA)
+    y0, x0 = (SRC_H - fg.shape[0]) // 2, (SRC_W - fg.shape[1]) // 2
+    bg[y0:y0 + fg.shape[0], x0:x0 + fg.shape[1]] = fg
+    return bg
+
+
 def _pollinations(prompt: str, cfg, seed: int) -> np.ndarray | None:
     ic = cfg["images"]
     full = f"{prompt}. {' '.join(ic['style_suffix'].split())}"
@@ -150,25 +163,54 @@ def _pollinations(prompt: str, cfg, seed: int) -> np.ndarray | None:
     return None
 
 
-def scene_images(cfg, script: dict) -> list[np.ndarray]:
-    out = []
-    poll_fails = 0          # circuit breaker: if the free image service keeps failing, stop waiting on it
+def scene_images(cfg, script: dict, topic: dict | None = None) -> list[np.ndarray]:
+    ic = cfg["images"]
+    out, credits = [], []
+    fails = {}                  # circuit breaker per provider
     t_start = time.time()
     base_seed = int(hashlib.md5(script["title"].encode()).hexdigest()[:8], 16)
+    n = len(script["scenes"])
+
+    # real-case photos go on a few evenly spaced middle scenes (never the hook)
+    real = {}
+    if topic and topic.get("kind") == "real" and "wikimedia" in ic["providers"]:
+        title = imagesrc.wiki_title_from_url(topic.get("url", "")) or topic.get("title")
+        photos = imagesrc.wikipedia_photos(title, limit=ic.get("max_real_photos", 4)) if title else []
+        slots = [round(k * (n - 2) / max(1, len(photos))) + 1 for k in range(len(photos))]
+        for slot, (img, credit) in zip(slots, photos):
+            if slot not in real and 0 < slot < n - 1:
+                real[slot] = (img, credit)
+
     for i, sc in enumerate(script["scenes"]):
-        img = None
-        for prov in cfg["images"]["providers"]:
-            if prov == "pollinations":
-                if poll_fails >= 3 or time.time() - t_start > cfg["images"].get("max_total_seconds", 240):
+        img, used = None, None
+        if i in real:
+            img, credit = real[i]
+            img, used = _fit_blur(img), "wikimedia"
+            credits.append(credit)
+        else:
+            for prov in ic["providers"]:
+                if prov == "wikimedia":
                     continue
-                img = _pollinations(sc["image_prompt"], cfg, base_seed + i)
-            elif prov == "procedural":
-                img = procedural(sc["image_prompt"], base_seed + i)
-            if prov == "pollinations":
-                poll_fails = 0 if img is not None else poll_fails + 1
-            if img is not None:
-                log.info("Scene %d image via %s", i, prov)
-                break
+                if prov != "procedural" and (fails.get(prov, 0) >= 3 or
+                                             time.time() - t_start > ic.get("max_total_seconds", 240)):
+                    continue
+                if prov == "cloudflare":
+                    img = imagesrc.cloudflare(f"{sc['image_prompt']}. {' '.join(ic['style_suffix'].split())}")
+                elif prov == "huggingface":
+                    img = imagesrc.huggingface(f"{sc['image_prompt']}. {' '.join(ic['style_suffix'].split())}")
+                elif prov == "pixabay":
+                    img = imagesrc.pixabay(sc.get("stock_query") or sc["image_prompt"])
+                elif prov == "pollinations":
+                    img = _pollinations(sc["image_prompt"], cfg, base_seed + i)
+                elif prov == "procedural":
+                    img = procedural(sc["image_prompt"], base_seed + i)
+                if prov != "procedural":
+                    fails[prov] = 0 if img is not None else fails.get(prov, 0) + 1
+                if img is not None:
+                    img, used = (_cover(img) if prov != "procedural" else img), prov
+                    break
+        log.info("Scene %d image via %s", i, used)
         out.append(img)
-        time.sleep(12.0 if img is not None and prov == "pollinations" else 1.0)
+        time.sleep(12.0 if used == "pollinations" else 0.5 if used else 1.0)
+    script["_credits"] = credits
     return out

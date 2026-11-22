@@ -17,8 +17,10 @@ def build_metadata(cfg, script: dict, topic: dict) -> dict:
     hashtags = " ".join(h if h.startswith("#") else f"#{h}" for h in script.get("hashtags", [])[:5])
     lines = [script["description"].strip(), ""]
     if topic["kind"] == "real":
-        lines += [f"Source: {topic['url']}", "Visuals are AI-generated, atmospheric illustrations - "
+        lines += [f"Source: {topic['url']}", "Some visuals are AI-generated, atmospheric illustrations - "
                   "not real footage of the events."]
+        if script.get("_credits"):
+            lines += ["Photo credits: " + "; ".join(script["_credits"])]
     else:
         lines += ["This is an original work of fiction. Any resemblance to real events is coincidental.",
                   "Visuals are AI-generated."]
@@ -67,7 +69,7 @@ def produce(cfg, llm, state, channel_key: str, slot_tag: str, offline_script: di
     sf.write(str(work / "narration.wav"), nar["audio"], 24000)
 
     # 4. visuals
-    images = visuals.scene_images(cfg, script)
+    images = visuals.scene_images(cfg, script, topic)
 
     # 5. captions + render
     ass = captions.build_ass(cfg, script, nar["scenes"], work / "captions.ass")

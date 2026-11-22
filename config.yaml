@@ -39,7 +39,10 @@ tts:
   hook_pad_seconds: 0.55
 
 images:
-  providers: [pollinations, procedural]   # tried in order, procedural never fails
+  # tried in order per scene; real Wikipedia photos (real cases) go on a few middle scenes.
+  # providers without credentials are skipped. procedural never fails.
+  providers: [wikimedia, cloudflare, huggingface, pollinations, procedural]
+  max_real_photos: 4
   style_suffix: >-
     cinematic dark documentary still, moody low-key lighting, desaturated colour grade,
     volumetric fog, 35mm film grain, shallow depth of field, vertical 9:16 composition,
