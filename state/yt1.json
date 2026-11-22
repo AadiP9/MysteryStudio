@@ -80,6 +80,21 @@
    "ids": {},
    "review": true,
    "quality": 8.5
+  },
+  {
+   "date": "2026-11-23",
+   "slot": 2,
+   "title": "The 1960 mystery man with a passport from a nonexistent country",
+   "topic": "John Zegrus",
+   "kind": "real",
+   "summary": "Explore the 1960 case of John Zegrus, a traveler detained in Japan whose counterfeit documents sparked decades of urban legends.",
+   "ids": {
+    "youtube": "lhZqkMjsNIg"
+   },
+   "review": true,
+   "quality": 8.0,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/lhZqkMjsNIg"
   }
  ],
  "used_topics": [
@@ -89,52 +104,13 @@
   "Axeman of New Orleans",
   "Yuba County Five",
   "Villisca axe murders",
-  "Dyatlov Pass incident"
+  "Dyatlov Pass incident",
+  "John Zegrus"
  ],
  "topic_pool": [
   {
-   "wiki_title": "Tamam Shud case",
-   "angle": "An unidentified man found dead on an Australian beach carried a scrap of paper with the Persian words 'Tamam Shud', leading to a hidden codebook and a decades-long counterintelligence mystery.",
-   "status": "unsolved"
-  },
-  {
    "wiki_title": "Disappearance of Flight 19",
    "angle": "Five US Navy torpedo bombers vanished over the Atlantic during a routine training exercise, sparking the enduring legend of the Bermuda Triangle after their compasses malfunctioned.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Cleveland Torso Murderer",
-   "angle": "During the Great Depression, a sadistic serial killer left meticulously dismembered victims across Ohio, taunting law enforcement while remaining entirely unidentified.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "The Boy in the Box",
-   "angle": "For decades, America's unknown child remained a heartbreaking cold case until forensic genealogy finally put a name to the boy found discarded in a cardboard box.",
-   "status": "solved"
-  },
-  {
-   "wiki_title": "The Man from Taured",
-   "angle": "A mysterious traveler arrived at a Tokyo airport carrying a passport from a country that did not exist, checked into a guarded hotel room, and then vanished into thin air.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Voynich manuscript",
-   "angle": "An illustrated codex written in a completely unknown, uncrackable script features bizarre botanical drawings and astronomical charts that have baffled cryptographers for centuries.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Hinterkaifeck murders",
-   "angle": "Six people were brutally murdered on an isolated German farm days after the homeowner found strange footprints leading out of the nearby woods into the snow with no return tracks.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Somerton Man",
-   "angle": "Recent DNA testing may have finally identified the mysterious man found dead on an Australian beach, yet the true motive behind his elaborate subterfuge remains hidden.",
-   "status": "disputed"
-  },
-  {
-   "wiki_title": "Mary Celeste",
-   "angle": "An American merchant brig was found drifting completely abandoned in the Atlantic Ocean in perfect sailing condition, with its cargo untouched and the crew's fate remaining a total enigma.",
    "status": "unsolved"
   },
   {
@@ -143,13 +119,18 @@
    "status": "unsolved"
   },
   {
-   "wiki_title": "Disappearance of Frederick Valentich",
-   "angle": "A young pilot radioed that a strange green aircraft was orbiting him before his plane vanished mid-air, with his final transmission cut off by metallic scraping sounds.",
+   "wiki_title": "Bermuda Triangle",
+   "angle": "Countless ships and aircraft have allegedly vanished without a trace between Florida, Puerto Rico, and Bermuda, inspiring decades of paranormal and scientific speculation.",
+   "status": "disputed"
+  },
+  {
+   "wiki_title": "Voynich manuscript",
+   "angle": "An illustrated codex written in a completely unknown, uncrackable script features bizarre botanical drawings and astronomical charts that have baffled cryptographers for centuries.",
    "status": "unsolved"
   },
   {
-   "wiki_title": "Isdal Woman",
-   "angle": "A mysterious woman using multiple false identities was found burned to death in a remote Norwegian valley, surrounded by coded notebooks and suitcases stripped of all labels.",
+   "wiki_title": "Tamam Shud case",
+   "angle": "An unidentified man found dead on an Australian beach carried a scrap of paper with the Persian words 'Tamam Shud', leading to a hidden codebook and a decades-long counterintelligence mystery.",
    "status": "unsolved"
   },
   {
@@ -158,14 +139,44 @@
    "status": "disputed"
   },
   {
-   "wiki_title": "Oak Island mystery",
-   "angle": "For over two centuries, treasure hunters have risked fortunes digging through a complex, engineered pit filled with booby-trapped flood tunnels, yet the supposed vault remains unreached.",
+   "wiki_title": "Isdal Woman",
+   "angle": "A mysterious woman using multiple false identities was found burned to death in a remote Norwegian valley, surrounded by coded notebooks and suitcases stripped of all labels.",
    "status": "unsolved"
   },
   {
-   "wiki_title": "Bermuda Triangle",
-   "angle": "Countless ships and aircraft have allegedly vanished without a trace between Florida, Puerto Rico, and Bermuda, inspiring decades of paranormal and scientific speculation.",
+   "wiki_title": "Mary Celeste",
+   "angle": "An American merchant brig was found drifting completely abandoned in the Atlantic Ocean in perfect sailing condition, with its cargo untouched and the crew's fate remaining a total enigma.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Cleveland Torso Murderer",
+   "angle": "During the Great Depression, a sadistic serial killer left meticulously dismembered victims across Ohio, taunting law enforcement while remaining entirely unidentified.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Disappearance of Frederick Valentich",
+   "angle": "A young pilot radioed that a strange green aircraft was orbiting him before his plane vanished mid-air, with his final transmission cut off by metallic scraping sounds.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "The Boy in the Box",
+   "angle": "For decades, America's unknown child remained a heartbreaking cold case until forensic genealogy finally put a name to the boy found discarded in a cardboard box.",
+   "status": "solved"
+  },
+  {
+   "wiki_title": "Somerton Man",
+   "angle": "Recent DNA testing may have finally identified the mysterious man found dead on an Australian beach, yet the true motive behind his elaborate subterfuge remains hidden.",
    "status": "disputed"
+  },
+  {
+   "wiki_title": "Hinterkaifeck murders",
+   "angle": "Six people were brutally murdered on an isolated German farm days after the homeowner found strange footprints leading out of the nearby woods into the snow with no return tracks.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Oak Island mystery",
+   "angle": "For over two centuries, treasure hunters have risked fortunes digging through a complex, engineered pit filled with booby-trapped flood tunnels, yet the supposed vault remains unreached.",
+   "status": "unsolved"
   },
   {
    "wiki_title": "Lead Masks Case",
