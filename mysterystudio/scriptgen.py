@@ -106,7 +106,7 @@ def deterministic_checks(script: dict, topic: dict, qcfg: dict) -> list[str]:
         for num in set(re.findall(r"\d[\d,\.]*\d|\d", narr)):
             if num.replace(",", "") not in src.replace(",", ""):
                 problems.append(f"Number '{num}' does not appear in the source text.")
-    text = (script.get("title", "") + " " + " ".join(s["narration"] for s in script["scenes"])).lower()
+    text = (script.get("title", "") + " " + script.get("description", "") + " " + " ".join(s["narration"] for s in script["scenes"])).lower()
     hits = sorted(set(m.group(0) for m in re.finditer(r"\b(?:" + GRAPHIC_TERMS + r")\b", text)))
     if hits:
         problems.append(f"Graphic wording is not allowed (advertiser-friendly rule): {hits[:6]}. Rephrase gently or cut it.")
