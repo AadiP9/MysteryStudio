@@ -8,7 +8,7 @@ from pathlib import Path
 
 import soundfile as sf
 
-from . import captions, music, qc, render, research, scriptgen, tts, visuals
+from . import captions, music, qc, render, research, scriptgen, style, tts, visuals
 from .config import OUT_DIR, log
 
 
@@ -52,6 +52,9 @@ def produce(cfg, llm, state, channel_key: str, slot_tag: str, offline_script: di
     (work / "script.json").write_text(json.dumps({"topic": {k: v for k, v in topic.items() if k != "source_text"},
                                                   "script": script}, indent=1, ensure_ascii=False), encoding="utf-8")
 
+    cfg, st = style.apply(cfg, script["title"])
+    log.info("Style: %s", st)
+
     # 2. narration
     nar = tts.synth_scenes(cfg, script, work)
     log.info("Narration %.1fs", nar["total"])
@@ -60,7 +63,7 @@ def produce(cfg, llm, state, channel_key: str, slot_tag: str, offline_script: di
     impacts = [i for i, s in enumerate(script["scenes"]) if s.get("impact")]
     import hashlib
     seed = int(hashlib.md5(script["title"].encode()).hexdigest()[:6], 16) % 10_000
-    audio = music.mix(nar["audio"], nar["scenes"], impacts, seed)
+    audio = music.mix(nar["audio"], nar["scenes"], impacts, seed, cfg.get("music_mood", "dread"))
     sf.write(str(work / "narration.wav"), nar["audio"], 24000)
 
     # 4. visuals

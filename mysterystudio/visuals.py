@@ -116,6 +116,9 @@ def procedural(prompt: str, seed: int) -> np.ndarray:
     else:
         fn = _skyline
     img = fn(SRC_H, SRC_W, rng)
+    img = img * np.array(rng.uniform(.8, 1.2, 3), np.float32)      # per-scene colour variation
+    if rng.random() < .5:
+        img = img[:, ::-1]
     return np.clip(img, 0, 255).astype(np.uint8)
 
 

@@ -81,7 +81,10 @@ def synth_scenes(cfg, script: dict, workdir: Path) -> dict:
         engine = t["engine"]
         try:
             if engine == "kokoro":
-                wav = _kokoro_synth(text, t["kokoro_voice"], t["speed"])
+                try:
+                    wav = _kokoro_synth(text, t["kokoro_voice"], t["speed"])
+                except Exception:
+                    wav = _kokoro_synth(text, "am_michael", 0.93)   # unknown voice -> safe default
             elif engine == "edge":
                 wav = _edge_synth(text, t["edge_voice"], workdir / f"edge_{i}")
             else:

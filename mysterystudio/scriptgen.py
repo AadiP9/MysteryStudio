@@ -132,9 +132,13 @@ def _scores(c: dict) -> list[float]:
     return [float(c[k]) for k in ("hook_strength", "retention", "clarity", "suspense", "accuracy", "originality")]
 
 
+from . import style  # noqa: E402
+
+
 def write_script(llm, cfg, topic: dict, identity: dict) -> dict:
     q, lcfg = cfg["quality"], cfg["llm"]
     prompt = (f"{_material(topic)}\n\nCHANNEL IDENTITY: {identity['brief']}\n\n{SCENE_SPEC}\n"
+              f"STORY SHAPE for this video: {style.structure_hint(topic['kind'])}\n"
               "Write the best possible script for this.")
     script = llm.json(prompt, system=WRITER_SYSTEM, temperature=lcfg["temperature_writer"])
     history = []

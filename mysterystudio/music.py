@@ -12,12 +12,21 @@ def _lowpass(x: np.ndarray, k: int) -> np.ndarray:
     return np.pad(y, (k // 2, len(x) - len(y) - k // 2))
 
 
-def drone(duration: float, seed: int) -> np.ndarray:
+MOODS = {  # roots, minor-third ratio, pulse period (s), wind gain, pulse gain
+    "dread": ([55.0, 49.0, 51.9, 58.3, 46.2], 1.189, 1.5, 0.25, 0.20),
+    "cold":  ([73.4, 82.4, 77.8], 1.189, 99.0, 0.70, 0.0),
+    "tense": ([55.0, 61.7, 65.4], 1.189, 0.8, 0.10, 0.28),
+    "haunt": ([65.4, 58.3, 69.3], 1.122, 2.4, 0.45, 0.12),
+}
+
+
+def drone(duration: float, seed: int, mood: str = "dread") -> np.ndarray:
     rng = np.random.default_rng(seed)
     n = int(duration * SR)
     t = np.arange(n) / SR
-    root = rng.choice([55.0, 49.0, 51.9, 58.3, 46.2])       # low A/G/Ab/Bb/F#
-    minor = [1.0, 1.189, 1.498, 2.0]                        # root, m3, 5th, octave
+    roots, m3, period, wind_g, pulse_g = MOODS.get(mood, MOODS["dread"])
+    root = rng.choice(roots)
+    minor = [1.0, m3, 1.498, 2.0]                        # root, m3, 5th, octave
     out = np.zeros(n)
     for i, ratio in enumerate(minor):
         f = root * ratio * (1 + rng.uniform(-0.002, 0.002))
@@ -35,9 +44,9 @@ def drone(duration: float, seed: int) -> np.ndarray:
         L = int(0.22 * SR)
         if i + L < n:
             env = np.exp(-np.linspace(0, 9, L))
-            pulse[i:i + L] += 0.20 * env * np.sin(2 * np.pi * 48 * np.arange(L) / SR)
-        bpm_t += 1.5 - 0.5 * (bpm_t / duration)
-    mix = out + sub + wind * 0.25 + pulse
+            pulse[i:i + L] += pulse_g * env * np.sin(2 * np.pi * 48 * np.arange(L) / SR)
+        bpm_t += period - 0.33 * period * (bpm_t / duration)
+    mix = out + sub + wind * wind_g + pulse
     fade = int(2.0 * SR)
     mix[:fade] *= np.linspace(0, 1, fade)
     mix[-fade:] *= np.linspace(1, 0, fade)
@@ -69,10 +78,10 @@ def _envelope(x: np.ndarray, win: float = 0.12) -> np.ndarray:
     return env / (np.max(env) + 1e-9)
 
 
-def mix(narration: np.ndarray, scene_times: list[dict], impacts: list[int], seed: int) -> np.ndarray:
+def mix(narration: np.ndarray, scene_times: list[dict], impacts: list[int], seed: int, mood: str = "dread") -> np.ndarray:
     """Narration + ducked drone + impacts at flagged scene starts. Output float32 at 24 kHz."""
     n = len(narration)
-    music = drone(n / SR + 1, seed)[:n] * 0.30
+    music = drone(n / SR + 1, seed, mood)[:n] * 0.30
     duck = 1.0 - 0.62 * np.clip(_envelope(narration) * 3.0, 0, 1)
     duck = _lowpass(duck, int(0.15 * SR))
     music = music * duck
