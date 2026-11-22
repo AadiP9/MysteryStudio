@@ -58,6 +58,17 @@
    "ids": {},
    "review": true,
    "quality": 8.5
+  },
+  {
+   "date": "2026-11-22",
+   "slot": 1,
+   "title": "The 1912 Villisca Axe Murders: The Locked House Mystery",
+   "topic": "Villisca axe murders",
+   "kind": "real",
+   "summary": "Explore the chilling 1912 Villisca axe murders, where eight victims were killed while strange clues were left behind. More than a century later, the identity of the killer remains a mystery.",
+   "ids": {},
+   "review": true,
+   "quality": 8.833333333333334
   }
  ],
  "used_topics": [
@@ -65,47 +76,18 @@
   "Isabella Stewart Gardner Museum theft",
   "Black Dahlia",
   "Axeman of New Orleans",
-  "Yuba County Five"
+  "Yuba County Five",
+  "Villisca axe murders"
  ],
  "topic_pool": [
   {
-   "wiki_title": "Tamam Shud case",
-   "angle": "An unidentified man found dead on an Australian beach carried a scrap of paper with the Persian words 'Tamam Shud', leading to a hidden codebook and a decades-long counterintelligence mystery.",
+   "wiki_title": "D. B. Cooper",
+   "angle": "A polite hijacker extorted a fortune in ransom, parachuted into the dark, freezing Pacific Northwest wilderness, and vanished without a trace, leaving behind only his tie and an enduring American legend.",
    "status": "unsolved"
-  },
-  {
-   "wiki_title": "The Man from Taured",
-   "angle": "A mysterious traveler arrived at a Tokyo airport carrying a passport from a country that did not exist, checked into a guarded hotel room, and then vanished into thin air.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Bermuda Triangle",
-   "angle": "Countless ships and aircraft have allegedly vanished without a trace between Florida, Puerto Rico, and Bermuda, inspiring decades of paranormal and scientific speculation.",
-   "status": "disputed"
   },
   {
    "wiki_title": "Hinterkaifeck murders",
    "angle": "Six people were brutally murdered on an isolated German farm days after the homeowner found strange footprints leading out of the nearby woods into the snow with no return tracks.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Texas Killing Fields",
-   "angle": "Dozens of bodies discovered over decades in a desolate stretch of oil-field highway continue to challenge investigators looking for elusive serial predators.",
-   "status": "disputed"
-  },
-  {
-   "wiki_title": "Cleveland Torso Murderer",
-   "angle": "During the Great Depression, a sadistic serial killer left meticulously dismembered victims across Ohio, taunting law enforcement while remaining entirely unidentified.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Disappearance of Frederick Valentich",
-   "angle": "A young pilot radioed that a strange green aircraft was orbiting him before his plane vanished mid-air, with his final transmission cut off by metallic scraping sounds.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Villisca axe murders",
-   "angle": "An entire family and two houseguests were bludgeoned to death in their beds by an unknown assailant who locked the house from the inside and left a plate of uneaten food in the attic.",
    "status": "unsolved"
   },
   {
@@ -117,6 +99,51 @@
    "wiki_title": "Disappearance of Flight 19",
    "angle": "Five US Navy torpedo bombers vanished over the Atlantic during a routine training exercise, sparking the enduring legend of the Bermuda Triangle after their compasses malfunctioned.",
    "status": "unsolved"
+  },
+  {
+   "wiki_title": "Texas Killing Fields",
+   "angle": "Dozens of bodies discovered over decades in a desolate stretch of oil-field highway continue to challenge investigators looking for elusive serial predators.",
+   "status": "disputed"
+  },
+  {
+   "wiki_title": "The Man from Taured",
+   "angle": "A mysterious traveler arrived at a Tokyo airport carrying a passport from a country that did not exist, checked into a guarded hotel room, and then vanished into thin air.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Oak Island mystery",
+   "angle": "For over two centuries, treasure hunters have risked fortunes digging through a complex, engineered pit filled with booby-trapped flood tunnels, yet the supposed vault remains unreached.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "The Boy in the Box",
+   "angle": "For decades, America's unknown child remained a heartbreaking cold case until forensic genealogy finally put a name to the boy found discarded in a cardboard box.",
+   "status": "solved"
+  },
+  {
+   "wiki_title": "Disappearance of Frederick Valentich",
+   "angle": "A young pilot radioed that a strange green aircraft was orbiting him before his plane vanished mid-air, with his final transmission cut off by metallic scraping sounds.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Cleveland Torso Murderer",
+   "angle": "During the Great Depression, a sadistic serial killer left meticulously dismembered victims across Ohio, taunting law enforcement while remaining entirely unidentified.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Bermuda Triangle",
+   "angle": "Countless ships and aircraft have allegedly vanished without a trace between Florida, Puerto Rico, and Bermuda, inspiring decades of paranormal and scientific speculation.",
+   "status": "disputed"
+  },
+  {
+   "wiki_title": "Tamam Shud case",
+   "angle": "An unidentified man found dead on an Australian beach carried a scrap of paper with the Persian words 'Tamam Shud', leading to a hidden codebook and a decades-long counterintelligence mystery.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Dyatlov Pass incident",
+   "angle": "Nine experienced hikers cut their way out of their tent in a blizzard and fled half-dressed into the freezing night, leaving behind bizarre radiological traces and fatal, unexplained internal injuries.",
+   "status": "disputed"
   },
   {
    "wiki_title": "Lead Masks Case",
@@ -136,26 +163,6 @@
   {
    "wiki_title": "Mary Celeste",
    "angle": "An American merchant brig was found drifting completely abandoned in the Atlantic Ocean in perfect sailing condition, with its cargo untouched and the crew's fate remaining a total enigma.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Oak Island mystery",
-   "angle": "For over two centuries, treasure hunters have risked fortunes digging through a complex, engineered pit filled with booby-trapped flood tunnels, yet the supposed vault remains unreached.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "The Boy in the Box",
-   "angle": "For decades, America's unknown child remained a heartbreaking cold case until forensic genealogy finally put a name to the boy found discarded in a cardboard box.",
-   "status": "solved"
-  },
-  {
-   "wiki_title": "Dyatlov Pass incident",
-   "angle": "Nine experienced hikers cut their way out of their tent in a blizzard and fled half-dressed into the freezing night, leaving behind bizarre radiological traces and fatal, unexplained internal injuries.",
-   "status": "disputed"
-  },
-  {
-   "wiki_title": "D. B. Cooper",
-   "angle": "A polite hijacker extorted a fortune in ransom, parachuted into the dark, freezing Pacific Northwest wilderness, and vanished without a trace, leaving behind only his tie and an enduring American legend.",
    "status": "unsolved"
   }
  ],
