@@ -95,6 +95,21 @@
    "quality": 8.0,
    "privacy": "private",
    "url": "https://youtube.com/shorts/lhZqkMjsNIg"
+  },
+  {
+   "date": "2026-11-23",
+   "slot": 1,
+   "title": "The Manufactured Mystery of the Bermuda Triangle",
+   "topic": "Bermuda Triangle",
+   "kind": "real",
+   "summary": "Explore the origins of the famous Bermuda Triangle urban legend and what official investigations actually discovered about the region.",
+   "ids": {
+    "youtube": "5Xm8fimrl38"
+   },
+   "review": true,
+   "quality": 8.166666666666666,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/5Xm8fimrl38"
   }
  ],
  "used_topics": [
@@ -105,7 +120,8 @@
   "Yuba County Five",
   "Villisca axe murders",
   "Dyatlov Pass incident",
-  "John Zegrus"
+  "John Zegrus",
+  "Bermuda Triangle"
  ],
  "topic_pool": [
   {
@@ -117,11 +133,6 @@
    "wiki_title": "D. B. Cooper",
    "angle": "A polite hijacker extorted a fortune in ransom, parachuted into the dark, freezing Pacific Northwest wilderness, and vanished without a trace, leaving behind only his tie and an enduring American legend.",
    "status": "unsolved"
-  },
-  {
-   "wiki_title": "Bermuda Triangle",
-   "angle": "Countless ships and aircraft have allegedly vanished without a trace between Florida, Puerto Rico, and Bermuda, inspiring decades of paranormal and scientific speculation.",
-   "status": "disputed"
   },
   {
    "wiki_title": "Voynich manuscript",
