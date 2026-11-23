@@ -59,13 +59,29 @@
    "quality": 8.666666666666666,
    "privacy": "private",
    "url": "https://youtube.com/shorts/XQOwmUvXY1A"
+  },
+  {
+   "date": "2026-11-23",
+   "slot": 1,
+   "title": "The Quiet Room (Fiction)",
+   "topic": "The Quiet Room",
+   "kind": "fiction",
+   "summary": "A man seeks absolute silence in an isolated sensory deprivation tank, only to discover an unexpected presence in the water with him. But the truth waiting outside the tank changes everything.",
+   "ids": {
+    "youtube": "NKA-Kt8qI9w"
+   },
+   "review": true,
+   "quality": 8.5,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/NKA-Kt8qI9w"
   }
  ],
  "used_topics": [
   "Unread Drafts",
   "Late Delivery",
   "The Third Chair",
-  "Blink"
+  "Blink",
+  "The Quiet Room"
  ],
  "topic_pool": [
   {
@@ -91,10 +107,6 @@
   {
    "title": "Static Feedback",
    "premise": "A sound designer cleaning up field recordings finds a faint, looping whisper hidden beneath the ambient noise of her quiet kitchen. The dread intensifies when she isolates the voice and recognizes it as her own voice, speaking a warning about a fire she hasn't started yet."
-  },
-  {
-   "title": "The Quiet Room",
-   "premise": "A man who pays for absolute silence in an isolated sensory deprivation booth begins hearing the steady, rhythmic breathing of someone sharing the tank with him. He panics and breaks out, only to find the booth door was padlocked from the outside and he has been floating in open air."
   },
   {
    "title": "The Lost Roll",
