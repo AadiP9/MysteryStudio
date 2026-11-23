@@ -35,12 +35,25 @@
    "review": true,
    "quality": 8.333333333333334,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-23",
+   "slot": 1,
+   "title": "The Golden Message Sent Into Deep Space",
+   "topic": "Voyager Golden Record",
+   "kind": "real",
+   "summary": "Discover the incredible story behind the Voyager Golden Record, a time capsule of humanity sent into interstellar space in 1977.",
+   "ids": {},
+   "review": true,
+   "quality": 8.333333333333334,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
   "The Portrait of Maya",
   "The Memory Broker's Vault",
-  "Mirror Symmetry"
+  "Mirror Symmetry",
+  "Voyager Golden Record"
  ],
  "topic_pool": [
   {
@@ -86,6 +99,126 @@
   {
    "title": "Subway Etiquette",
    "premise": "A late-night commuter plays a silent puzzle game on her phone, completely ignoring a stranger sitting opposite her who is desperately trying to mime a warning. When she finally looks up from her screen, she realizes she is the only living passenger, and the 'stranger' is her own reflection trapped in the tunnel glass."
+  },
+  {
+   "wiki_title": "Dyatlov Pass incident",
+   "angle": "Nine experienced hikers died in the Ural mountains under bizarre circumstances, their tent ripped open from the inside and their bodies displaying inexplicable levels of radiation.",
+   "status": "disputed"
+  },
+  {
+   "wiki_title": "Voynich manuscript",
+   "angle": "An illustrated codex written in an entirely unidentifiable language baffles cryptographers and historians who still cannot determine if it is an elaborate hoax or a lost medieval text.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Tamam Shud case",
+   "angle": "A well-dressed man found dead on an Australian beach carried no identification except for a scrap of paper with Persian words meaning 'finished', sparking a decades-long international espionage puzzle.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Isdal Woman",
+   "angle": "An unidentified woman found burned in a remote Norwegian valley used multiple fake identities, coded notebooks, and wigs, suggesting a Cold War spy operation gone wrong.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Disappearance of Flight 19",
+   "angle": "Five US Navy torpedo bombers vanished over the Bermuda Triangle after their compasses malfunctioned, and the rescue plane sent to find them also disappeared without a trace.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Georgia Guidestones",
+   "angle": "A massive granite monument inscribed with ten guidelines for humanity was anonymously commissioned and erected before being mysteriously bombed and demolished.",
+   "status": "solved"
+  },
+  {
+   "wiki_title": "Antikythera mechanism",
+   "angle": "Discovered in a ship wreck, an ancient Greek hand-powered analog computer predates similar technology by a millennium and accurately tracks astronomical positions.",
+   "status": "solved"
+  },
+  {
+   "wiki_title": "Oak Island mystery",
+   "angle": "For over two centuries, treasure hunters have excavated a water-logged pit in Nova Scotia filled with complex booby traps, yet the ultimate prize remains hidden.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Bermuda Triangle",
+   "angle": "A loosely defined region of the Atlantic Ocean where numerous ships and aircraft are claimed to have mysteriously vanished under supernatural or unexplained circumstances.",
+   "status": "disputed"
+  },
+  {
+   "wiki_title": "Wow! signal",
+   "angle": "A strong narrowband radio signal detected by Jerry R. Ehman bore all the hallmarks of originating from outside the solar system, but was never detected again.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Disappearance of the Lead Masks of Vintém Hill",
+   "angle": "Two electronic technicians were found dead on a Brazilian hill wearing homemade lead masks and sunglasses, with a notebook containing bizarre, cryptic time instructions.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Taos Hum",
+   "angle": "Residents of a small New Mexico town are persistently tormented by a low-frequency buzzing sound that only a small percentage of the population can hear.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Mary Celeste",
+   "angle": "An American merchant brig was found drifting deserted and in seaworthy condition in the Atlantic Ocean, with all its cargo and crew inexplicably missing.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "DB Cooper",
+   "angle": "A sleek hijacker extorted a ransom, parachuted out of a commercial Boeing 727 into a freezing rainstorm, and vanished into American folklore forever.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Cicada 3301",
+   "angle": "An elite, highly complex internet puzzle surfaced online, recruiting brilliant minds through cryptography, steganography, and hidden physical clues around the globe.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Kryos",
+   "angle": "A mysterious whispered audio artifact left behind in an abandoned recording studio revealed strange coordinates leading deep into an Arctic wasteland.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "The Somerton Man",
+   "angle": "Recent forensic genealogy finally put a name to Australia's most famous unidentified corpse, but the man's secret life and cause of death remain deeply shrouded in mystery.",
+   "status": "solved"
+  },
+  {
+   "wiki_title": "Piri Reis map",
+   "angle": "A 16th-century Ottoman cartographer drew a world map depicting Antarctic coastlines thousands of years before they were officially discovered, fueling theories of ancient exploration.",
+   "status": "disputed"
+  },
+  {
+   "wiki_title": "Kryptos",
+   "angle": "A cryptic sculpture installed at CIA headquarters contains four encrypted messages, and despite decades of work by codebreakers, the final section remains unsolved.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Taman Shud Mystery",
+   "angle": "The autopsy of an unidentified man revealed unusual physical traits and a rare book connection that baffled Australian police in 1948.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Disappearance of Frederick Valentich",
+   "angle": "A young Australian pilot reported a strange green aircraft following him before his radio transmission abruptly cut out with metallic scraping noises.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Hinterkaifeck murders",
+   "angle": "Six inhabitants of a remote German farmstead were murdered with a mattock after hearing strange footsteps in the attic and finding footprints leading from the snow into the forest.",
+   "status": "unsolved"
+  },
+  {
+   "wiki_title": "Patrician Clock",
+   "angle": "An anomalous 18th-century timepiece kept exact astronomical time even after being completely submerged in saltwater for fifty years.",
+   "status": "disputed"
+  },
+  {
+   "wiki_title": "SS Ourang Medan",
+   "angle": "Distress calls from a Dutch freighter reported the entire crew dead with terrified expressions, and the ship exploded before it could be towed into port.",
+   "status": "unsolved"
   }
  ],
  "comments_done": {},
