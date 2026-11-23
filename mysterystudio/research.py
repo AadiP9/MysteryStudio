@@ -64,10 +64,11 @@ def wiki_search(query: str) -> str | None:
 def pick_real_topic(llm, state, identity: dict) -> dict:
     """Return {kind, title, angle, status, url, source_text}. Refills the pool via Gemini when empty."""
     for _ in range(2):
-        pool = state.data["topic_pool"]
+        pool = [p for p in state.data["topic_pool"] if isinstance(p, dict) and p.get("wiki_title")]
         random.shuffle(pool)
         while pool:
             item = pool.pop()
+            state.data["topic_pool"] = [p for p in state.data["topic_pool"] if p is not item]
             if state.topic_used(item["wiki_title"]):
                 continue
             art = wiki_extract(item["wiki_title"])
@@ -87,7 +88,8 @@ def pick_real_topic(llm, state, identity: dict) -> dict:
         log.info("Refilling topic pool via Gemini")
         used = ", ".join(state.data["used_topics"][-120:]) or "none"
         new = llm.json(POOL_PROMPT.format(brief=identity["brief"], n=25, used=used), temperature=1.0)
-        state.data["topic_pool"] = [i for i in new if isinstance(i, dict) and i.get("wiki_title")]
+        keep = [p for p in state.data["topic_pool"] if isinstance(p, dict) and "premise" in p]   # mixed channels
+        state.data["topic_pool"] = keep + [i for i in new if isinstance(i, dict) and i.get("wiki_title")]
         state.save()
     raise RuntimeError("Could not find an unused real case after refilling the pool")
 
@@ -105,6 +107,7 @@ def pick_fiction_topic(llm, state, identity: dict) -> dict:
                     "angle": item["premise"], "status": "fiction", "url": "", "source_text": ""}
         used = ", ".join(state.data["used_topics"][-80:]) or "none"
         new = llm.json(FICTION_PROMPT.format(brief=identity["brief"], n=15, used=used), temperature=1.0)
-        state.data["topic_pool"] = [i for i in new if isinstance(i, dict) and i.get("premise")]
+        keep = [p for p in state.data["topic_pool"] if isinstance(p, dict) and p.get("wiki_title")]
+        state.data["topic_pool"] = keep + [i for i in new if isinstance(i, dict) and i.get("premise")]
         state.save()
     raise RuntimeError("Could not generate an unused fiction premise")
