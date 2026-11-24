@@ -71,6 +71,18 @@
    "review": true,
    "quality": 8.833333333333334,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": 2,
+   "title": "Did the Bermuda Triangle ever really exist?",
+   "topic": "Bermuda Triangle",
+   "kind": "real",
+   "summary": "Explore the origins of the Bermuda Triangle myth and discover what official investigations and researchers actually found.",
+   "ids": {},
+   "review": true,
+   "quality": 8.5,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
@@ -79,7 +91,8 @@
   "Mirror Symmetry",
   "Voyager Golden Record",
   "Dyatlov Pass incident",
-  "Flight 19"
+  "Flight 19",
+  "Bermuda Triangle"
  ],
  "topic_pool": [
   {
@@ -155,11 +168,6 @@
    "wiki_title": "Oak Island mystery",
    "angle": "For over two centuries, treasure hunters have excavated a water-logged pit in Nova Scotia filled with complex booby traps, yet the ultimate prize remains hidden.",
    "status": "unsolved"
-  },
-  {
-   "wiki_title": "Bermuda Triangle",
-   "angle": "A loosely defined region of the Atlantic Ocean where numerous ships and aircraft are claimed to have mysteriously vanished under supernatural or unexplained circumstances.",
-   "status": "disputed"
   },
   {
    "wiki_title": "Wow! signal",
