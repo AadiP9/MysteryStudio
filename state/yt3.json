@@ -89,6 +89,21 @@
    "quality": 8.833333333333334,
    "privacy": "private",
    "url": "https://youtube.com/shorts/uqHSwPcHflY"
+  },
+  {
+   "date": "2026-11-24",
+   "slot": 1,
+   "title": "The Tenant Upstairs (Fiction)",
+   "topic": "The Tenant Upstairs",
+   "kind": "fiction",
+   "summary": "An isolated tenant keeps an audio journal documenting the heavy footsteps pacing directly above his bed every night. When he reports the noise to building management, he uncovers an impossible truth about his apartment building.",
+   "ids": {
+    "youtube": "fAWYt6C6mmg"
+   },
+   "review": true,
+   "quality": 8.5,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/fAWYt6C6mmg"
   }
  ],
  "used_topics": [
@@ -97,13 +112,10 @@
   "The Third Chair",
   "Blink",
   "The Quiet Room",
-  "The Last Subscriber"
+  "The Last Subscriber",
+  "The Tenant Upstairs"
  ],
  "topic_pool": [
-  {
-   "title": "The Tenant Upstairs",
-   "premise": "A meticulous man becomes obsessed with the heavy footsteps of the invisible tenant living directly above him in his newly rented flat. The chilling revelation arrives when the management informs him that the building is only one story tall and he is on the top floor."
-  },
   {
    "title": "Left on Read",
    "premise": "A woman texts her missing twin sister every day to maintain a semblance of normalcy, only to receive comforting, perfectly contextualized replies. The twist shatters her reality when she discovers her phone has been disconnected and out of battery for the entire week."
