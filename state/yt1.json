@@ -110,6 +110,21 @@
    "quality": 8.166666666666666,
    "privacy": "private",
    "url": "https://youtube.com/shorts/5Xm8fimrl38"
+  },
+  {
+   "date": "2026-11-24",
+   "slot": 2,
+   "title": "The woman in the ice valley left no name behind",
+   "topic": "Isdal Woman",
+   "kind": "real",
+   "summary": "In 1970, an unidentified woman was found dead in a remote Norwegian valley with multiple fake identities and coded notebooks. Decades later, her true name remains a mystery.",
+   "ids": {
+    "youtube": "D5NDT5cIVs4"
+   },
+   "review": true,
+   "quality": 8.833333333333334,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/D5NDT5cIVs4"
   }
  ],
  "used_topics": [
@@ -121,7 +136,8 @@
   "Villisca axe murders",
   "Dyatlov Pass incident",
   "John Zegrus",
-  "Bermuda Triangle"
+  "Bermuda Triangle",
+  "Isdal Woman"
  ],
  "topic_pool": [
   {
@@ -148,11 +164,6 @@
    "wiki_title": "Texas Killing Fields",
    "angle": "Dozens of bodies discovered over decades in a desolate stretch of oil-field highway continue to challenge investigators looking for elusive serial predators.",
    "status": "disputed"
-  },
-  {
-   "wiki_title": "Isdal Woman",
-   "angle": "A mysterious woman using multiple false identities was found burned to death in a remote Norwegian valley, surrounded by coded notebooks and suitcases stripped of all labels.",
-   "status": "unsolved"
   },
   {
    "wiki_title": "Mary Celeste",
