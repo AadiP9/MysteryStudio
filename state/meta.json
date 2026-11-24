@@ -47,13 +47,26 @@
    "review": true,
    "quality": 8.333333333333334,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-24",
+   "slot": 2,
+   "title": "The Unsolved Mystery of Dyatlov Pass",
+   "topic": "Dyatlov Pass incident",
+   "kind": "real",
+   "summary": "In 1959, nine experienced Soviet ski hikers perished under mysterious circumstances in the Ural Mountains. While official investigations cited a natural force like an avalanche, bizarre physical evidence continues to spark debate.",
+   "ids": {},
+   "review": true,
+   "quality": 8.5,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
   "The Portrait of Maya",
   "The Memory Broker's Vault",
   "Mirror Symmetry",
-  "Voyager Golden Record"
+  "Voyager Golden Record",
+  "Dyatlov Pass incident"
  ],
  "topic_pool": [
   {
@@ -99,11 +112,6 @@
   {
    "title": "Subway Etiquette",
    "premise": "A late-night commuter plays a silent puzzle game on her phone, completely ignoring a stranger sitting opposite her who is desperately trying to mime a warning. When she finally looks up from her screen, she realizes she is the only living passenger, and the 'stranger' is her own reflection trapped in the tunnel glass."
-  },
-  {
-   "wiki_title": "Dyatlov Pass incident",
-   "angle": "Nine experienced hikers died in the Ural mountains under bizarre circumstances, their tent ripped open from the inside and their bodies displaying inexplicable levels of radiation.",
-   "status": "disputed"
   },
   {
    "wiki_title": "Voynich manuscript",
