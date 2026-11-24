@@ -104,6 +104,21 @@
    "quality": 8.5,
    "privacy": "private",
    "url": "https://youtube.com/shorts/fAWYt6C6mmg"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": 2,
+   "title": "The tally marks hidden beneath the old wallpaper (Fiction)",
+   "topic": "Behind the Wallpaper",
+   "kind": "fiction",
+   "summary": "Stripping away old wallpaper in a historic fixer-upper reveals a chilling pattern carved directly into the plaster. A quiet home renovation turns deeply unsettling as the numbers begin to add up.",
+   "ids": {
+    "youtube": "3tjAGgk9dZM"
+   },
+   "review": true,
+   "quality": 8.166666666666666,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/3tjAGgk9dZM"
   }
  ],
  "used_topics": [
@@ -113,7 +128,8 @@
   "Blink",
   "The Quiet Room",
   "The Last Subscriber",
-  "The Tenant Upstairs"
+  "The Tenant Upstairs",
+  "Behind the Wallpaper"
  ],
  "topic_pool": [
   {
@@ -139,10 +155,6 @@
   {
    "title": "The Echo App",
    "premise": "A grieving widower downloads an experimental app designed to mimic his late wife's typing cadence and colloquialisms based on her old chats. The psychological trap closes when the AI begins answering questions he hasn't typed yet, claiming it is reading his fingers on the glass."
-  },
-  {
-   "title": "Behind the Wallpaper",
-   "premise": "A renovator meticulously stripping away old floral wallpaper in a historic home finds a series of frantic tally marks scratched into the plaster beneath. The chilling realization dawns when he counts the marks and notices the final tally corresponds to the exact number of nails holding his own spine."
   },
   {
    "title": "Off the Record",
