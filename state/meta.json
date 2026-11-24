@@ -59,6 +59,18 @@
    "review": true,
    "quality": 8.5,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-24",
+   "slot": 1,
+   "title": "The Vanishing of Flight 19",
+   "topic": "Flight 19",
+   "kind": "real",
+   "summary": "On December 5, 1945, five US Navy bombers vanished over the Atlantic after their navigation equipment failed. When a rescue plane was dispatched to find them, it too disappeared without a trace.",
+   "ids": {},
+   "review": true,
+   "quality": 8.833333333333334,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
@@ -66,7 +78,8 @@
   "The Memory Broker's Vault",
   "Mirror Symmetry",
   "Voyager Golden Record",
-  "Dyatlov Pass incident"
+  "Dyatlov Pass incident",
+  "Flight 19"
  ],
  "topic_pool": [
   {
@@ -126,11 +139,6 @@
   {
    "wiki_title": "Isdal Woman",
    "angle": "An unidentified woman found burned in a remote Norwegian valley used multiple fake identities, coded notebooks, and wigs, suggesting a Cold War spy operation gone wrong.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Disappearance of Flight 19",
-   "angle": "Five US Navy torpedo bombers vanished over the Bermuda Triangle after their compasses malfunctioned, and the rescue plane sent to find them also disappeared without a trace.",
    "status": "unsolved"
   },
   {
