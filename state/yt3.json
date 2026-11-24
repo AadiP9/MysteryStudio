@@ -74,6 +74,21 @@
    "quality": 8.5,
    "privacy": "private",
    "url": "https://youtube.com/shorts/NKA-Kt8qI9w"
+  },
+  {
+   "date": "2026-11-24",
+   "slot": 2,
+   "title": "The Four Rules of an Empty Livestream (Fiction)",
+   "topic": "The Last Subscriber",
+   "kind": "fiction",
+   "summary": "A late-night broadcaster discovers that her only listener isn't just watching her live—they seem to know every move before it happens. An unsettling look into isolation and digital dread.",
+   "ids": {
+    "youtube": "uqHSwPcHflY"
+   },
+   "review": true,
+   "quality": 8.833333333333334,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/uqHSwPcHflY"
   }
  ],
  "used_topics": [
@@ -81,13 +96,10 @@
   "Late Delivery",
   "The Third Chair",
   "Blink",
-  "The Quiet Room"
+  "The Quiet Room",
+  "The Last Subscriber"
  ],
  "topic_pool": [
-  {
-   "title": "The Last Subscriber",
-   "premise": "A lonely podcaster notices a single listener who joins every livestream seconds before it starts and types timestamps describing her exact movements. The dread peaks when she realizes the timestamps are counting down to her final breath, which was pre-recorded into the audio file before she even pressed go."
-  },
   {
    "title": "The Tenant Upstairs",
    "premise": "A meticulous man becomes obsessed with the heavy footsteps of the invisible tenant living directly above him in his newly rented flat. The chilling revelation arrives when the management informs him that the building is only one story tall and he is on the top floor."
