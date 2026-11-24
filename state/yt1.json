@@ -125,6 +125,21 @@
    "quality": 8.833333333333334,
    "privacy": "private",
    "url": "https://youtube.com/shorts/D5NDT5cIVs4"
+  },
+  {
+   "date": "2026-11-24",
+   "slot": 1,
+   "title": "The 200-Year Treasure Trap of Oak Island",
+   "topic": "Oak Island mystery",
+   "kind": "real",
+   "summary": "For over two centuries, treasure hunters on Oak Island have attempted to excavate a deep underground pit. Despite finding parchment fragments, timber, and mysterious artifacts, the alleged treasure has never been recovered.",
+   "ids": {
+    "youtube": "j0_zzarJ7Io"
+   },
+   "review": true,
+   "quality": 9.0,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/j0_zzarJ7Io"
   }
  ],
  "used_topics": [
@@ -137,7 +152,8 @@
   "Dyatlov Pass incident",
   "John Zegrus",
   "Bermuda Triangle",
-  "Isdal Woman"
+  "Isdal Woman",
+  "Oak Island mystery"
  ],
  "topic_pool": [
   {
@@ -193,11 +209,6 @@
   {
    "wiki_title": "Hinterkaifeck murders",
    "angle": "Six people were brutally murdered on an isolated German farm days after the homeowner found strange footprints leading out of the nearby woods into the snow with no return tracks.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Oak Island mystery",
-   "angle": "For over two centuries, treasure hunters have risked fortunes digging through a complex, engineered pit filled with booby-trapped flood tunnels, yet the supposed vault remains unreached.",
    "status": "unsolved"
   },
   {
