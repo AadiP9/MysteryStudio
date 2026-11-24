@@ -140,6 +140,21 @@
    "quality": 9.0,
    "privacy": "private",
    "url": "https://youtube.com/shorts/j0_zzarJ7Io"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": 2,
+   "title": "The hill, the lead masks, and the missing signal",
+   "topic": "Lead masks case",
+   "kind": "real",
+   "summary": "In August 1966, two Brazilian electronics technicians climbed a steep hill wearing suits and handmade lead masks. Beside them lay a notebook with impossible instructions, leaving investigators with one of South America's deepest cold cases.",
+   "ids": {
+    "youtube": "mEQXA8wfnXg"
+   },
+   "review": true,
+   "quality": 9.0,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/mEQXA8wfnXg"
   }
  ],
  "used_topics": [
@@ -153,7 +168,8 @@
   "John Zegrus",
   "Bermuda Triangle",
   "Isdal Woman",
-  "Oak Island mystery"
+  "Oak Island mystery",
+  "Lead masks case"
  ],
  "topic_pool": [
   {
@@ -209,11 +225,6 @@
   {
    "wiki_title": "Hinterkaifeck murders",
    "angle": "Six people were brutally murdered on an isolated German farm days after the homeowner found strange footprints leading out of the nearby woods into the snow with no return tracks.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Lead Masks Case",
-   "angle": "Two electronics technicians were found dead on a Brazilian hill wearing handmade lead masks and formal suits, with a notebook containing cryptic instructions about capsules and searching for the dead.",
    "status": "unsolved"
   }
  ],
