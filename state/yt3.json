@@ -134,6 +134,21 @@
    "quality": 8.333333333333334,
    "privacy": "private",
    "url": "https://youtube.com/shorts/3cxrUWHpaWU"
+  },
+  {
+   "date": "2026-11-26",
+   "slot": 2,
+   "title": "Static Feedback (Fiction)",
+   "topic": "Static Feedback",
+   "kind": "fiction",
+   "summary": "A sound designer cleaning up ambient kitchen recordings discovers a terrifying audio file hidden in the static. Following the warning leads to an inescapable realization about time and danger.",
+   "ids": {
+    "youtube": "gade3oCXvp8"
+   },
+   "review": true,
+   "quality": 8.833333333333334,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/gade3oCXvp8"
   }
  ],
  "used_topics": [
@@ -145,7 +160,8 @@
   "The Last Subscriber",
   "The Tenant Upstairs",
   "Behind the Wallpaper",
-  "Left on Read"
+  "Left on Read",
+  "Static Feedback"
  ],
  "topic_pool": [
   {
@@ -155,10 +171,6 @@
   {
    "title": "The Blue Hour",
    "premise": "A security guard watches the same desolate stretch of suburban highway every night, comforted by the distant porch light of a solitary farmhouse. He learns the farmhouse burned down in 1994, meaning the light he uses to gauge his sanity is coming from inside his own retina."
-  },
-  {
-   "title": "Static Feedback",
-   "premise": "A sound designer cleaning up field recordings finds a faint, looping whisper hidden beneath the ambient noise of her quiet kitchen. The dread intensifies when she isolates the voice and recognizes it as her own voice, speaking a warning about a fire she hasn't started yet."
   },
   {
    "title": "The Lost Roll",
