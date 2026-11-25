@@ -95,6 +95,18 @@
    "review": true,
    "quality": 8.333333333333334,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-26",
+   "slot": 2,
+   "title": "The Strange Rise and Fall of America's Stonehenge",
+   "topic": "Georgia Guidestones",
+   "kind": "real",
+   "summary": "Explore the mysterious history and sudden destruction of the Georgia Guidestones, a massive granite monument inscribed with controversial guidelines for humanity.",
+   "ids": {},
+   "review": true,
+   "quality": 8.166666666666666,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
@@ -105,7 +117,8 @@
   "Dyatlov Pass incident",
   "Flight 19",
   "Bermuda Triangle",
-  "Somerton Man"
+  "Somerton Man",
+  "Georgia Guidestones"
  ],
  "topic_pool": [
   {
@@ -166,11 +179,6 @@
    "wiki_title": "Isdal Woman",
    "angle": "An unidentified woman found burned in a remote Norwegian valley used multiple fake identities, coded notebooks, and wigs, suggesting a Cold War spy operation gone wrong.",
    "status": "unsolved"
-  },
-  {
-   "wiki_title": "Georgia Guidestones",
-   "angle": "A massive granite monument inscribed with ten guidelines for humanity was anonymously commissioned and erected before being mysteriously bombed and demolished.",
-   "status": "solved"
   },
   {
    "wiki_title": "Antikythera mechanism",
