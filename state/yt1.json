@@ -170,6 +170,21 @@
    "quality": 8.5,
    "privacy": "private",
    "url": "https://youtube.com/shorts/IuyH3CaOEEg"
+  },
+  {
+   "date": "2026-11-26",
+   "slot": 2,
+   "title": "The final transmission of pilot Frederick Valentich",
+   "topic": "Disappearance of Frederick Valentich",
+   "kind": "real",
+   "summary": "In 1978, a young Australian pilot radioed about a strange craft orbiting his plane before vanishing mid-air. What really happened over Bass Strait that night?",
+   "ids": {
+    "youtube": "ZOCBYnK1Psg"
+   },
+   "review": true,
+   "quality": 8.5,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/ZOCBYnK1Psg"
   }
  ],
  "used_topics": [
@@ -185,7 +200,8 @@
   "Isdal Woman",
   "Oak Island mystery",
   "Lead masks case",
-  "Voynich manuscript"
+  "Voynich manuscript",
+  "Disappearance of Frederick Valentich"
  ],
  "topic_pool": [
   {
@@ -216,11 +232,6 @@
   {
    "wiki_title": "Cleveland Torso Murderer",
    "angle": "During the Great Depression, a sadistic serial killer left meticulously dismembered victims across Ohio, taunting law enforcement while remaining entirely unidentified.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Disappearance of Frederick Valentich",
-   "angle": "A young pilot radioed that a strange green aircraft was orbiting him before his plane vanished mid-air, with his final transmission cut off by metallic scraping sounds.",
    "status": "unsolved"
   },
   {
