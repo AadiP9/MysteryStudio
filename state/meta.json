@@ -83,6 +83,18 @@
    "review": true,
    "quality": 8.5,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": 1,
+   "title": "The Somerton Man: An Unidentified Body and a Secret Code",
+   "topic": "Somerton Man",
+   "kind": "real",
+   "summary": "In 1948, an unidentified man was found dead on an Australian beach with all clothing labels removed and a Persian phrase tucked in his pocket. Decades later, DNA evidence finally offered a name, but his strange life and death remain unexplained.",
+   "ids": {},
+   "review": true,
+   "quality": 8.333333333333334,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
@@ -92,7 +104,8 @@
   "Voyager Golden Record",
   "Dyatlov Pass incident",
   "Flight 19",
-  "Bermuda Triangle"
+  "Bermuda Triangle",
+  "Somerton Man"
  ],
  "topic_pool": [
   {
@@ -203,11 +216,6 @@
    "wiki_title": "Kryos",
    "angle": "A mysterious whispered audio artifact left behind in an abandoned recording studio revealed strange coordinates leading deep into an Arctic wasteland.",
    "status": "unsolved"
-  },
-  {
-   "wiki_title": "The Somerton Man",
-   "angle": "Recent forensic genealogy finally put a name to Australia's most famous unidentified corpse, but the man's secret life and cause of death remain deeply shrouded in mystery.",
-   "status": "solved"
   },
   {
    "wiki_title": "Piri Reis map",
