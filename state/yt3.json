@@ -119,6 +119,21 @@
    "quality": 8.166666666666666,
    "privacy": "private",
    "url": "https://youtube.com/shorts/3tjAGgk9dZM"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": 1,
+   "title": "The Messages That Couldn't Exist (Fiction)",
+   "topic": "Left on Read",
+   "kind": "fiction",
+   "summary": "When her twin goes missing, she keeps texting her missing sister's phone to cope. The replies bring comfort—until a terrifying discovery changes everything.",
+   "ids": {
+    "youtube": "3cxrUWHpaWU"
+   },
+   "review": true,
+   "quality": 8.333333333333334,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/3cxrUWHpaWU"
   }
  ],
  "used_topics": [
@@ -129,13 +144,10 @@
   "The Quiet Room",
   "The Last Subscriber",
   "The Tenant Upstairs",
-  "Behind the Wallpaper"
+  "Behind the Wallpaper",
+  "Left on Read"
  ],
  "topic_pool": [
-  {
-   "title": "Left on Read",
-   "premise": "A woman texts her missing twin sister every day to maintain a semblance of normalcy, only to receive comforting, perfectly contextualized replies. The twist shatters her reality when she discovers her phone has been disconnected and out of battery for the entire week."
-  },
   {
    "title": "Mirror Symmetry",
    "premise": "An artist spends weeks painting a self-portrait, increasingly disturbed by how the reflection in her mirror seems to blink a fraction of a second after she does. The unsettling climax reveals she stopped looking in mirrors months ago, and the canvas is actually a transparent glass pane."
