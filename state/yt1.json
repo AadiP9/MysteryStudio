@@ -155,6 +155,21 @@
    "quality": 9.0,
    "privacy": "private",
    "url": "https://youtube.com/shorts/mEQXA8wfnXg"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": 1,
+   "title": "The 600-year-old manuscript that no one can read",
+   "topic": "Voynich manuscript",
+   "kind": "real",
+   "summary": "For centuries, cryptographers and linguists have tried to unlock the Voynich manuscript. Written in an unknown script with strange botanical drawings, its true origin remains a mystery.",
+   "ids": {
+    "youtube": "IuyH3CaOEEg"
+   },
+   "review": true,
+   "quality": 8.5,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/IuyH3CaOEEg"
   }
  ],
  "used_topics": [
@@ -169,7 +184,8 @@
   "Bermuda Triangle",
   "Isdal Woman",
   "Oak Island mystery",
-  "Lead masks case"
+  "Lead masks case",
+  "Voynich manuscript"
  ],
  "topic_pool": [
   {
@@ -180,11 +196,6 @@
   {
    "wiki_title": "D. B. Cooper",
    "angle": "A polite hijacker extorted a fortune in ransom, parachuted into the dark, freezing Pacific Northwest wilderness, and vanished without a trace, leaving behind only his tie and an enduring American legend.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Voynich manuscript",
-   "angle": "An illustrated codex written in a completely unknown, uncrackable script features bizarre botanical drawings and astronomical charts that have baffled cryptographers for centuries.",
    "status": "unsolved"
   },
   {
