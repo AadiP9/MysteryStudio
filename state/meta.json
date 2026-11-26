@@ -119,6 +119,18 @@
    "review": true,
    "quality": 8.166666666666666,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": 2,
+   "title": "Six bodies, 3 days with a stranger at Hinterkaifeck",
+   "topic": "Hinterkaifeck murders",
+   "kind": "real",
+   "summary": "Explore the chilling 1922 mystery of Hinterkaifeck, where six people were murdered and the killer stayed on the farm for three days. What would you have done if you heard those footsteps in the attic?",
+   "ids": {},
+   "review": true,
+   "quality": 9.0,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
@@ -131,7 +143,8 @@
   "Bermuda Triangle",
   "Somerton Man",
   "Georgia Guidestones",
-  "Disappearance of Frederick Valentich"
+  "Disappearance of Frederick Valentich",
+  "Hinterkaifeck murders"
  ],
  "topic_pool": [
   {
@@ -251,11 +264,6 @@
   {
    "wiki_title": "Taman Shud Mystery",
    "angle": "The autopsy of an unidentified man revealed unusual physical traits and a rare book connection that baffled Australian police in 1948.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Hinterkaifeck murders",
-   "angle": "Six inhabitants of a remote German farmstead were murdered with a mattock after hearing strange footsteps in the attic and finding footprints leading from the snow into the forest.",
    "status": "unsolved"
   },
   {
