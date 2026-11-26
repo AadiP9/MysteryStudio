@@ -185,6 +185,21 @@
    "quality": 8.5,
    "privacy": "private",
    "url": "https://youtube.com/shorts/ZOCBYnK1Psg"
+  },
+  {
+   "date": "2026-11-26",
+   "slot": 1,
+   "title": "The 25-acre Texas field where 34 bodies were left behind",
+   "topic": "Texas Killing Fields",
+   "kind": "real",
+   "summary": "Explore the unsettling history of the Texas Killing Fields, where dozens of victims vanished along the I-45 corridor and left investigators searching for answers.",
+   "ids": {
+    "youtube": "u8NVmFYm1jk"
+   },
+   "review": true,
+   "quality": 8.5,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/u8NVmFYm1jk"
   }
  ],
  "used_topics": [
@@ -201,7 +216,8 @@
   "Oak Island mystery",
   "Lead masks case",
   "Voynich manuscript",
-  "Disappearance of Frederick Valentich"
+  "Disappearance of Frederick Valentich",
+  "Texas Killing Fields"
  ],
  "topic_pool": [
   {
@@ -218,11 +234,6 @@
    "wiki_title": "Tamam Shud case",
    "angle": "An unidentified man found dead on an Australian beach carried a scrap of paper with the Persian words 'Tamam Shud', leading to a hidden codebook and a decades-long counterintelligence mystery.",
    "status": "unsolved"
-  },
-  {
-   "wiki_title": "Texas Killing Fields",
-   "angle": "Dozens of bodies discovered over decades in a desolate stretch of oil-field highway continue to challenge investigators looking for elusive serial predators.",
-   "status": "disputed"
   },
   {
    "wiki_title": "Mary Celeste",
