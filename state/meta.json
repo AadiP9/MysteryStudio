@@ -107,6 +107,18 @@
    "review": true,
    "quality": 8.166666666666666,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-26",
+   "slot": 1,
+   "title": "The Disappearance of Pilot Frederick Valentich",
+   "topic": "Disappearance of Frederick Valentich",
+   "kind": "real",
+   "summary": "In 1978, a young Australian pilot reported a strange aircraft following him before his radio cut out with metallic noises. Explore the enduring mystery of Frederick Valentich's disappearance.",
+   "ids": {},
+   "review": true,
+   "quality": 8.166666666666666,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
@@ -118,7 +130,8 @@
   "Flight 19",
   "Bermuda Triangle",
   "Somerton Man",
-  "Georgia Guidestones"
+  "Georgia Guidestones",
+  "Disappearance of Frederick Valentich"
  ],
  "topic_pool": [
   {
@@ -238,11 +251,6 @@
   {
    "wiki_title": "Taman Shud Mystery",
    "angle": "The autopsy of an unidentified man revealed unusual physical traits and a rare book connection that baffled Australian police in 1948.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Disappearance of Frederick Valentich",
-   "angle": "A young Australian pilot reported a strange green aircraft following him before his radio transmission abruptly cut out with metallic scraping noises.",
    "status": "unsolved"
   },
   {
