@@ -200,6 +200,21 @@
    "quality": 8.5,
    "privacy": "private",
    "url": "https://youtube.com/shorts/u8NVmFYm1jk"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": 2,
+   "title": "The Dead Man With a Secret Code in His Pocket",
+   "topic": "Somerton Man",
+   "kind": "real",
+   "summary": "In 1948, an unidentified man was found dead on an Australian beach with a hidden code and a torn poetry page. Decades later, the Somerton Man remains one of history's most baffling cold cases. Drop a theory in the comments.",
+   "ids": {
+    "youtube": "xKfJ98a-G20"
+   },
+   "review": true,
+   "quality": 8.666666666666666,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/xKfJ98a-G20"
   }
  ],
  "used_topics": [
@@ -217,7 +232,8 @@
   "Lead masks case",
   "Voynich manuscript",
   "Disappearance of Frederick Valentich",
-  "Texas Killing Fields"
+  "Texas Killing Fields",
+  "Somerton Man"
  ],
  "topic_pool": [
   {
@@ -231,11 +247,6 @@
    "status": "unsolved"
   },
   {
-   "wiki_title": "Tamam Shud case",
-   "angle": "An unidentified man found dead on an Australian beach carried a scrap of paper with the Persian words 'Tamam Shud', leading to a hidden codebook and a decades-long counterintelligence mystery.",
-   "status": "unsolved"
-  },
-  {
    "wiki_title": "Mary Celeste",
    "angle": "An American merchant brig was found drifting completely abandoned in the Atlantic Ocean in perfect sailing condition, with its cargo untouched and the crew's fate remaining a total enigma.",
    "status": "unsolved"
@@ -244,11 +255,6 @@
    "wiki_title": "Cleveland Torso Murderer",
    "angle": "During the Great Depression, a sadistic serial killer left meticulously dismembered victims across Ohio, taunting law enforcement while remaining entirely unidentified.",
    "status": "unsolved"
-  },
-  {
-   "wiki_title": "The Boy in the Box",
-   "angle": "For decades, America's unknown child remained a heartbreaking cold case until forensic genealogy finally put a name to the boy found discarded in a cardboard box.",
-   "status": "solved"
   },
   {
    "wiki_title": "Somerton Man",
@@ -417,6 +423,11 @@
    "ts": 1795261729,
    "stage": "quality",
    "msg": "Script for 'Disappearance of Maura Murray' failed quality gate after 3 revisions. Last problems: [\"Claim not found in source text: 'Inside the locked vehicle, an officer found blank accident report forms and a book about mountain climbing'\"]"
+  },
+  {
+   "ts": 1795732668,
+   "stage": "quality",
+   "msg": "Script for 'Killing of Joseph Augustus Zarelli' failed quality gate after 3 revisions. Last problems: [\"Claim not found in source text: 'In February 1957, a young boy's body was found inside a cardboard box in Philadelphia.'\", \"Claim not found in source text: 'The child was wrapped in a plaid blanket and showed signs of severe malnourishment.'\", \"Claim not found in source text: 'Police took finger"
   }
  ]
 }
