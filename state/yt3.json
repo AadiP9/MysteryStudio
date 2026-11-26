@@ -164,6 +164,21 @@
    "quality": 8.333333333333334,
    "privacy": "private",
    "url": "https://youtube.com/shorts/q3oVfHK2ong"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": 2,
+   "title": "The Porch Light at 3:14 AM (Fiction)",
+   "topic": "The Blue Hour",
+   "kind": "fiction",
+   "summary": "A night guard relies on a distant farmhouse light to keep his bearings during long graveyard shifts. When county records reveal the truth about the property, he is forced to question what he has been looking at.",
+   "ids": {
+    "youtube": "gIT3LXTeaTw"
+   },
+   "review": true,
+   "quality": 8.666666666666666,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/gIT3LXTeaTw"
   }
  ],
  "used_topics": [
@@ -177,13 +192,10 @@
   "Behind the Wallpaper",
   "Left on Read",
   "Static Feedback",
-  "Mirror Symmetry"
+  "Mirror Symmetry",
+  "The Blue Hour"
  ],
  "topic_pool": [
-  {
-   "title": "The Blue Hour",
-   "premise": "A security guard watches the same desolate stretch of suburban highway every night, comforted by the distant porch light of a solitary farmhouse. He learns the farmhouse burned down in 1994, meaning the light he uses to gauge his sanity is coming from inside his own retina."
-  },
   {
    "title": "The Lost Roll",
    "premise": "An amateur photographer develops a roll of vintage film found in a thrift store camera, watching images of an unfamiliar bedroom appear in the chemical bath. Her blood runs cold when she spots her own sleeping form in the background of a photo taken decades before she was born."
