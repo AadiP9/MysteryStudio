@@ -149,6 +149,21 @@
    "quality": 8.833333333333334,
    "privacy": "private",
    "url": "https://youtube.com/shorts/gade3oCXvp8"
+  },
+  {
+   "date": "2026-11-26",
+   "slot": 1,
+   "title": "The Portrait That Blinked Second (Fiction)",
+   "topic": "Mirror Symmetry",
+   "kind": "fiction",
+   "summary": "An artist spends weeks working on a self-portrait, growing uneasy when her reflection starts lagging behind. But a chilling realization changes everything about what she was looking at.",
+   "ids": {
+    "youtube": "q3oVfHK2ong"
+   },
+   "review": true,
+   "quality": 8.333333333333334,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/q3oVfHK2ong"
   }
  ],
  "used_topics": [
@@ -161,13 +176,10 @@
   "The Tenant Upstairs",
   "Behind the Wallpaper",
   "Left on Read",
-  "Static Feedback"
+  "Static Feedback",
+  "Mirror Symmetry"
  ],
  "topic_pool": [
-  {
-   "title": "Mirror Symmetry",
-   "premise": "An artist spends weeks painting a self-portrait, increasingly disturbed by how the reflection in her mirror seems to blink a fraction of a second after she does. The unsettling climax reveals she stopped looking in mirrors months ago, and the canvas is actually a transparent glass pane."
-  },
   {
    "title": "The Blue Hour",
    "premise": "A security guard watches the same desolate stretch of suburban highway every night, comforted by the distant porch light of a solitary farmhouse. He learns the farmhouse burned down in 1994, meaning the light he uses to gauge his sanity is coming from inside his own retina."
@@ -175,10 +187,6 @@
   {
    "title": "The Lost Roll",
    "premise": "An amateur photographer develops a roll of vintage film found in a thrift store camera, watching images of an unfamiliar bedroom appear in the chemical bath. Her blood runs cold when she spots her own sleeping form in the background of a photo taken decades before she was born."
-  },
-  {
-   "title": "The Echo App",
-   "premise": "A grieving widower downloads an experimental app designed to mimic his late wife's typing cadence and colloquialisms based on her old chats. The psychological trap closes when the AI begins answering questions he hasn't typed yet, claiming it is reading his fingers on the glass."
   },
   {
    "title": "Off the Record",
@@ -326,6 +334,11 @@
    "ts": 1795209918,
    "stage": "production",
    "msg": " 'This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}\n"
+  },
+  {
+   "ts": 1795698198,
+   "stage": "quality",
+   "msg": "black frames 3.3-4.1s; black frames 5.5-6.7s"
   }
  ]
 }
