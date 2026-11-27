@@ -215,6 +215,21 @@
    "quality": 8.666666666666666,
    "privacy": "private",
    "url": "https://youtube.com/shorts/xKfJ98a-G20"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": 1,
+   "title": "Five Navy Bombers Vanished Into Thin Air",
+   "topic": "Flight 19",
+   "kind": "real",
+   "summary": "Five US Navy torpedo bombers vanished without a trace during a routine training exercise in 1945, sparking an enduring aviation mystery.",
+   "ids": {
+    "youtube": "OqHI2UsyCG4"
+   },
+   "review": true,
+   "quality": 8.5,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/OqHI2UsyCG4"
   }
  ],
  "used_topics": [
@@ -233,14 +248,11 @@
   "Voynich manuscript",
   "Disappearance of Frederick Valentich",
   "Texas Killing Fields",
-  "Somerton Man"
+  "Somerton Man",
+  "Cleveland Torso Murderer",
+  "Flight 19"
  ],
  "topic_pool": [
-  {
-   "wiki_title": "Disappearance of Flight 19",
-   "angle": "Five US Navy torpedo bombers vanished over the Atlantic during a routine training exercise, sparking the enduring legend of the Bermuda Triangle after their compasses malfunctioned.",
-   "status": "unsolved"
-  },
   {
    "wiki_title": "D. B. Cooper",
    "angle": "A polite hijacker extorted a fortune in ransom, parachuted into the dark, freezing Pacific Northwest wilderness, and vanished without a trace, leaving behind only his tie and an enduring American legend.",
@@ -249,11 +261,6 @@
   {
    "wiki_title": "Mary Celeste",
    "angle": "An American merchant brig was found drifting completely abandoned in the Atlantic Ocean in perfect sailing condition, with its cargo untouched and the crew's fate remaining a total enigma.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Cleveland Torso Murderer",
-   "angle": "During the Great Depression, a sadistic serial killer left meticulously dismembered victims across Ohio, taunting law enforcement while remaining entirely unidentified.",
    "status": "unsolved"
   },
   {
