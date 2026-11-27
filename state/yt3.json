@@ -179,6 +179,21 @@
    "quality": 8.666666666666666,
    "privacy": "private",
    "url": "https://youtube.com/shorts/gIT3LXTeaTw"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": 1,
+   "title": "The vintage thrift store camera held impossible photos (Fiction)",
+   "topic": "The Lost Roll",
+   "kind": "fiction",
+   "summary": "An amateur photographer finds a vintage camera at a thrift store and discovers something impossible in the film. A short eerie psychological mystery about rules you shouldn't break.",
+   "ids": {
+    "youtube": "geb1ajyll5g"
+   },
+   "review": true,
+   "quality": 8.833333333333334,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/geb1ajyll5g"
   }
  ],
  "used_topics": [
@@ -193,13 +208,10 @@
   "Left on Read",
   "Static Feedback",
   "Mirror Symmetry",
-  "The Blue Hour"
+  "The Blue Hour",
+  "The Lost Roll"
  ],
  "topic_pool": [
-  {
-   "title": "The Lost Roll",
-   "premise": "An amateur photographer develops a roll of vintage film found in a thrift store camera, watching images of an unfamiliar bedroom appear in the chemical bath. Her blood runs cold when she spots her own sleeping form in the background of a photo taken decades before she was born."
-  },
   {
    "title": "Off the Record",
    "premise": "A meticulous archivist transcribes old cassette tapes of psychiatric sessions, growing overly protective of a patient who claims she is being replaced by her therapist. The unsettling truth unfolds when the archivist presses play on the final tape and hears her own voice speaking from the doctor's chair."
