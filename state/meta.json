@@ -131,6 +131,18 @@
    "review": true,
    "quality": 9.0,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": 1,
+   "title": "The Unsolved Mystery of Norway's Isdal Woman",
+   "topic": "Isdal Woman",
+   "kind": "real",
+   "summary": "Explore the chilling mystery of the Isdal Woman, found dead in Norway in 1970 with multiple fake identities, wigs, and coded notebooks.",
+   "ids": {},
+   "review": true,
+   "quality": 8.166666666666666,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
@@ -144,7 +156,8 @@
   "Somerton Man",
   "Georgia Guidestones",
   "Disappearance of Frederick Valentich",
-  "Hinterkaifeck murders"
+  "Hinterkaifeck murders",
+  "Isdal Woman"
  ],
  "topic_pool": [
   {
@@ -199,11 +212,6 @@
   {
    "wiki_title": "Tamam Shud case",
    "angle": "A well-dressed man found dead on an Australian beach carried no identification except for a scrap of paper with Persian words meaning 'finished', sparking a decades-long international espionage puzzle.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Isdal Woman",
-   "angle": "An unidentified woman found burned in a remote Norwegian valley used multiple fake identities, coded notebooks, and wigs, suggesting a Cold War spy operation gone wrong.",
    "status": "unsolved"
   },
   {
