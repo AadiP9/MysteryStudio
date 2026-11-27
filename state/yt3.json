@@ -194,6 +194,21 @@
    "quality": 8.833333333333334,
    "privacy": "private",
    "url": "https://youtube.com/shorts/geb1ajyll5g"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": 2,
+   "title": "She transcribed psychiatric tapes until she heard her own vo (Fiction)",
+   "topic": "Off the Record",
+   "kind": "fiction",
+   "summary": "A meticulous archivist transcribes old cassette tapes of psychiatric sessions, growing overly protective of a patient who claims she is being replaced by her therapist. The unsettling truth unfolds when the archivist presses play.",
+   "ids": {
+    "youtube": "_ptjRzwtD8A"
+   },
+   "review": true,
+   "quality": 8.5,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/_ptjRzwtD8A"
   }
  ],
  "used_topics": [
@@ -209,14 +224,10 @@
   "Static Feedback",
   "Mirror Symmetry",
   "The Blue Hour",
-  "The Lost Roll"
+  "The Lost Roll",
+  "Off the Record"
  ],
- "topic_pool": [
-  {
-   "title": "Off the Record",
-   "premise": "A meticulous archivist transcribes old cassette tapes of psychiatric sessions, growing overly protective of a patient who claims she is being replaced by her therapist. The unsettling truth unfolds when the archivist presses play on the final tape and hears her own voice speaking from the doctor's chair."
-  }
- ],
+ "topic_pool": [],
  "comments_done": {},
  "failures": [
   {
