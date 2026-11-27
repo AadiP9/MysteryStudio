@@ -230,6 +230,21 @@
    "quality": 8.5,
    "privacy": "private",
    "url": "https://youtube.com/shorts/OqHI2UsyCG4"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": 2,
+   "title": "The farm where someone lived with the victims",
+   "topic": "Hinterkaifeck murders",
+   "kind": "real",
+   "summary": "Six people were found murdered on an isolated German farm in 1922, but the killer stayed behind to live among the victims for days.",
+   "ids": {
+    "youtube": "GPZZKoDXCTk"
+   },
+   "review": true,
+   "quality": 8.333333333333334,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/GPZZKoDXCTk"
   }
  ],
  "used_topics": [
@@ -250,7 +265,8 @@
   "Texas Killing Fields",
   "Somerton Man",
   "Cleveland Torso Murderer",
-  "Flight 19"
+  "Flight 19",
+  "Hinterkaifeck murders"
  ],
  "topic_pool": [
   {
@@ -267,11 +283,6 @@
    "wiki_title": "Somerton Man",
    "angle": "Recent DNA testing may have finally identified the mysterious man found dead on an Australian beach, yet the true motive behind his elaborate subterfuge remains hidden.",
    "status": "disputed"
-  },
-  {
-   "wiki_title": "Hinterkaifeck murders",
-   "angle": "Six people were brutally murdered on an isolated German farm days after the homeowner found strange footprints leading out of the nearby woods into the snow with no return tracks.",
-   "status": "unsolved"
   }
  ],
  "comments_done": {},
