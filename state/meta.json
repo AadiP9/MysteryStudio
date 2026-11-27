@@ -143,6 +143,18 @@
    "review": true,
    "quality": 8.166666666666666,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": 2,
+   "title": "The Strange Detail That Doomed D.B. Cooper's Escape",
+   "topic": "D. B. Cooper",
+   "kind": "real",
+   "summary": "In 1971, a sleek hijacker extorted a ransom and parachuted out of a commercial airliner into a freezing storm. But one strange detail about his parachutes has baffled investigators ever since.",
+   "ids": {},
+   "review": true,
+   "quality": 8.5,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
@@ -157,7 +169,8 @@
   "Georgia Guidestones",
   "Disappearance of Frederick Valentich",
   "Hinterkaifeck murders",
-  "Isdal Woman"
+  "Isdal Woman",
+  "D. B. Cooper"
  ],
  "topic_pool": [
   {
@@ -210,11 +223,6 @@
    "status": "unsolved"
   },
   {
-   "wiki_title": "Tamam Shud case",
-   "angle": "A well-dressed man found dead on an Australian beach carried no identification except for a scrap of paper with Persian words meaning 'finished', sparking a decades-long international espionage puzzle.",
-   "status": "unsolved"
-  },
-  {
    "wiki_title": "Antikythera mechanism",
    "angle": "Discovered in a ship wreck, an ancient Greek hand-powered analog computer predates similar technology by a millennium and accurately tracks astronomical positions.",
    "status": "solved"
@@ -242,11 +250,6 @@
   {
    "wiki_title": "Mary Celeste",
    "angle": "An American merchant brig was found drifting deserted and in seaworthy condition in the Atlantic Ocean, with all its cargo and crew inexplicably missing.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "DB Cooper",
-   "angle": "A sleek hijacker extorted a ransom, parachuted out of a commercial Boeing 727 into a freezing rainstorm, and vanished into American folklore forever.",
    "status": "unsolved"
   },
   {
