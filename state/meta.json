@@ -155,6 +155,18 @@
    "review": true,
    "quality": 8.5,
    "privacy": "review-skipped"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": 1,
+   "title": "The 72-Second Radio Signal We Never Explained",
+   "topic": "Wow! signal",
+   "kind": "real",
+   "summary": "In August 1977, a powerful narrowband radio signal was captured by a telescope in Ohio, prompting an astronomer to write a single word in the margin. Decades later, the origin of that anomaly remains completely unexplained.",
+   "ids": {},
+   "review": true,
+   "quality": 8.666666666666666,
+   "privacy": "review-skipped"
   }
  ],
  "used_topics": [
@@ -170,7 +182,8 @@
   "Disappearance of Frederick Valentich",
   "Hinterkaifeck murders",
   "Isdal Woman",
-  "D. B. Cooper"
+  "D. B. Cooper",
+  "Wow! signal"
  ],
  "topic_pool": [
   {
@@ -230,11 +243,6 @@
   {
    "wiki_title": "Oak Island mystery",
    "angle": "For over two centuries, treasure hunters have excavated a water-logged pit in Nova Scotia filled with complex booby traps, yet the ultimate prize remains hidden.",
-   "status": "unsolved"
-  },
-  {
-   "wiki_title": "Wow! signal",
-   "angle": "A strong narrowband radio signal detected by Jerry R. Ehman bore all the hallmarks of originating from outside the solar system, but was never detected again.",
    "status": "unsolved"
   },
   {
