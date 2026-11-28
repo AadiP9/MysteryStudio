@@ -209,6 +209,21 @@
    "quality": 8.5,
    "privacy": "private",
    "url": "https://youtube.com/shorts/_ptjRzwtD8A"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": 1,
+   "title": "The study app that wrote in my forgotten handwriting (Fiction)",
+   "topic": "Unfamiliar Handwriting",
+   "kind": "fiction",
+   "summary": "A college student uses a vocabulary matching app, only to find the daily lists form a confession to a break-in written in a forgotten hand.",
+   "ids": {
+    "youtube": "dtXbEx9OjG0"
+   },
+   "review": true,
+   "quality": 8.833333333333334,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/dtXbEx9OjG0"
   }
  ],
  "used_topics": [
@@ -225,9 +240,67 @@
   "Mirror Symmetry",
   "The Blue Hour",
   "The Lost Roll",
-  "Off the Record"
+  "Off the Record",
+  "Unfamiliar Handwriting"
  ],
- "topic_pool": [],
+ "topic_pool": [
+  {
+   "title": "The Infinite Staircase",
+   "premise": "A fitness tracker user notices her daily step count hits 10,000 before she even wakes up. She watches her hallway security footage to catch a sleepwalking intruder, only to see herself endlessly descending basement stairs she doesn't own, with someone whispering her exact waking thoughts from behind."
+  },
+  {
+   "title": "Subtle Scent",
+   "premise": "A minimalist living alone starts buying expensive, unknown colognes because they always arrive pre-sprayed on his favorite armchair. The twist is revealed when his security camera catches no intruder, but rather his own clothes slowly shedding a perfume he hasn't bought since the day his twin brother disappeared."
+  },
+  {
+   "title": "Delayed Echo",
+   "premise": "An audio engineer cleaning up a nature podcast recording notices faint breathing on a solo track that should be completely silent. He isolates the audio file, only to realize the rhythmic breaths match his own pacing in the room—recorded three seconds before he actually inhales."
+  },
+  {
+   "title": "The Green Light",
+   "premise": "A night-shift lighthouse keeper grows comforted by a matching green lantern blinking from an abandoned cottage across the rocky cove. When the coast guard visits to inspect the boarded-up ruin, they inform him the cottage hasn't had electricity since the 1970s—and his own lighthouse lamp has been unlit for months."
+  },
+  {
+   "title": "Dust and Shadows",
+   "premise": "A meticulous neat freak becomes obsessed with a single fingerprint smudged on her pristine, newly wiped kitchen counter. She spends hours analyzing who could have touched it, until she licks her thumb to clean it and realizes the print matches her own whorls, perfectly preserved in a layer of dust she laid down before she was born."
+  },
+  {
+   "title": "Reading Between the Lines",
+   "premise": "An aspiring novelist finds comfort in a vintage typewriter left in her rental cabin, typing out her memoir sentence by sentence. Her dread grows when the ribbon starts automatically punching keys while she sleeps, finishing the sentences with the exact words her missing roommate used in her final police statement."
+  },
+  {
+   "title": "The Empty Plate",
+   "premise": "A strict minimalist meal-prepper notices a half-eaten sandwich left on her counter every morning, neatly wrapped in wax paper she never bought. She sets up a hidden camera expecting a rodent, only to watch footage of herself sleep-eating while holding a conversation with a person sitting directly across from her in an empty kitchen."
+  },
+  {
+   "title": "Clockwork Silence",
+   "premise": "A ticking grandfather clock in a quiet apartment begins skipping beats, plunging the room into deafening, unnatural silences. The protagonist finally smashes the glass face to fix the pendulum, only to find the gears are made of human teeth that are currently chewing through the winding mechanism."
+  },
+  {
+   "title": "The Stranger's Key",
+   "premise": "A cautious apartment dweller finds an unfamiliar brass key resting on her welcome mat every single Tuesday morning. She spends weeks trying every lock in the building to find its match, until she opens her own front door from the inside and hears the key sliding into the exterior keyhole."
+  },
+  {
+   "title": "Framed Memories",
+   "premise": "A woman curating her digital photo frame grows disturbed when unfamiliar strangers keep appearing in the background of her childhood vacation slides. She zooms in on an old beach photo to inspect a smiling man standing behind her parents, realizing the man's face is her own reflection aging backward."
+  },
+  {
+   "title": "The Open Tab",
+   "premise": "A remote worker keeps finding a mysterious browser tab open on her laptop every morning, streaming live audio of heavy traffic and a distant siren. She traces the IP address to her own router, realizing the audio is broadcasting from the microphone of the phone currently pressed against her ear."
+  },
+  {
+   "title": "Numbered Days",
+   "premise": "An organized archivist organizes her life by writing dates on small sticky notes and placing them on relevant objects around her studio. Panic sets in when she finds a sticky note dated for tomorrow afternoon stuck to her own forehead while looking in the bathroom mirror."
+  },
+  {
+   "title": "Static Horizon",
+   "premise": "A landscape painter notices the horizon line in her daily sketches slowly tilting downward by a fraction of a millimeter each day. She rushes to the window to check the actual coastline, only to discover the ocean has completely vanished, replaced by an endless grey wall painted with her own childhood sketches."
+  },
+  {
+   "title": "The Neighbor's Window",
+   "premise": "A lonely night-owl passes the time by watching an identical apartment block across the alley, taking comfort in the silhouette of a reader sitting by a lamp. She waves to the figure every night, until she turns off her own desk lamp and watches the silhouette across the alley wave back with the hand she just lowered."
+  }
+ ],
  "comments_done": {},
  "failures": [
   {
