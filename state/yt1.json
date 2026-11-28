@@ -245,6 +245,21 @@
    "quality": 8.333333333333334,
    "privacy": "private",
    "url": "https://youtube.com/shorts/GPZZKoDXCTk"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": 1,
+   "title": "The polite hijacker who vanished into thin air",
+   "topic": "D. B. Cooper",
+   "kind": "real",
+   "summary": "In 1971, a calm and polite passenger hijacked a commercial flight, extorted a fortune, and parachuted into the dark Pacific Northwest wilderness. Decades later, his true identity remains completely unknown.",
+   "ids": {
+    "youtube": "sUXVCCd_Pck"
+   },
+   "review": true,
+   "quality": 8.666666666666666,
+   "privacy": "private",
+   "url": "https://youtube.com/shorts/sUXVCCd_Pck"
   }
  ],
  "used_topics": [
@@ -266,14 +281,10 @@
   "Somerton Man",
   "Cleveland Torso Murderer",
   "Flight 19",
-  "Hinterkaifeck murders"
+  "Hinterkaifeck murders",
+  "D. B. Cooper"
  ],
  "topic_pool": [
-  {
-   "wiki_title": "D. B. Cooper",
-   "angle": "A polite hijacker extorted a fortune in ransom, parachuted into the dark, freezing Pacific Northwest wilderness, and vanished without a trace, leaving behind only his tie and an enduring American legend.",
-   "status": "unsolved"
-  },
   {
    "wiki_title": "Mary Celeste",
    "angle": "An American merchant brig was found drifting completely abandoned in the Atlantic Ocean in perfect sailing condition, with its cargo untouched and the crew's fate remaining a total enigma.",
